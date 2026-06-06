@@ -315,6 +315,110 @@ footer{
   color:#475569;
 }
 
+/* ── Features grid ───────────────────────────────────── */
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1.25rem;
+  margin-top:2.75rem;
+}
+.feat-card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1.5rem;
+  background:var(--bg);
+  transition:box-shadow .15s,border-color .15s;
+}
+.feat-card:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(37,99,235,.08)}
+.feat-icon{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  background:var(--accent-50);
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:.875rem;
+  flex-shrink:0;
+}
+.feat-card h3{font-size:.9rem;font-weight:700;margin-bottom:.35rem}
+.feat-card p{font-size:.85rem;color:var(--muted);line-height:1.6}
+
+/* ── Pricing grid ────────────────────────────────────── */
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:1.5rem;
+  margin-top:2.75rem;
+  align-items:start;
+}
+.plan-card{
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:2rem;
+  background:var(--bg);
+  position:relative;
+}
+.plan-card--featured{
+  border-color:var(--accent);
+  box-shadow:0 4px 24px rgba(37,99,235,.12);
+}
+.plan-badge{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  padding:.25rem .75rem;
+  border-radius:999px;
+  margin-bottom:.875rem;
+}
+.plan-name{font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.plan-price{
+  font-size:2.25rem;
+  font-weight:800;
+  letter-spacing:-.04em;
+  color:var(--text);
+  line-height:1;
+  margin-bottom:.25rem;
+}
+.plan-cycle{font-size:1rem;font-weight:400;color:var(--muted)}
+.plan-annual{font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:.75rem}
+.plan-desc{font-size:.875rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.6}
+.plan-features{
+  list-style:none;
+  margin:0 0 1.75rem;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:.5rem;
+}
+.plan-features li{
+  font-size:.875rem;
+  color:#374151;
+  padding-left:1.35rem;
+  position:relative;
+  line-height:1.5;
+}
+.plan-features li::before{
+  content:'✓';
+  position:absolute;
+  left:0;
+  color:var(--accent);
+  font-weight:700;
+  font-size:.8rem;
+}
+.plan-btn{width:100%;justify-content:center}
+.pricing-note{
+  margin-top:1.75rem;
+  font-size:.85rem;
+  color:var(--muted);
+}
+.pricing-note a{color:var(--accent);font-weight:500}
+
 /* ── Legal pages ──────────────────────────────────────── */
 .legal-top{
   background:var(--bg-alt);
