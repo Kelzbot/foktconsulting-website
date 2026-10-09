@@ -16,6 +16,7 @@ Static HTML and CSS. No build step, no dependencies, no framework.
 | `privacy.html` | Privacy Policy |
 | `refund.html` | Refund &amp; Cancellation Policy |
 | `styles.css` | All styling |
+| `site.js` | Single `ADDRESS` constant for the company address (temporary — see comment inside) |
 | `favicon.svg` | Site icon |
 
 The three legal pages are the ones referenced from the product, so they need to stay
@@ -37,4 +38,4 @@ python -m http.server 8000
 
 ---
 
-FOKT Consulting LLC · Cheyenne, Wyoming · support@foktconsulting.com
+FOKT Consulting LLC · Wyoming, United States · support@foktconsulting.com
