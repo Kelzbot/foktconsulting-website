@@ -10,6 +10,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FOKT Consulting LLC",
+    "legalName": "FOKT Consulting LLC",
+    "url": "https://foktconsulting.com",
+    "email": "support@foktconsulting.com",
+    "foundingDate": "2025-11",
+    "areaServed": "Worldwide",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "WY",
+      "addressCountry": "US"
+    },
+    "owns": {
+      "@type": "Product",
+      "name": "NofoDesk",
+      "url": "https://nofodesk.com"
+    },
+    "makesOffer": {
+      "@type": "Offer",
+      "url": "https://nofodesk.com",
+      "itemOffered": {
+        "@type": "SoftwareApplication",
+        "name": "NofoDesk",
+        "url": "https://nofodesk.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web"
+      }
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -35,7 +68,7 @@
   <!-- ── Hero ────────────────────────────────────────── -->
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-badge">Wyoming, United States · Est. 2026</span>
+      <span class="hero-badge">Wyoming, United States · Est. 2025</span>
       <h1>Focused software for professionals who <em class="hi">work with complex information.</em></h1>
       <p>FOKT Consulting LLC designs and builds tools that help professionals cut through dense documents, manage critical data, and do their best work — without the overhead.</p>
       <div class="hero-cta">
@@ -65,6 +98,7 @@
             <span class="tag">Proposal Writing</span>
             <span class="tag">Team Collaboration</span>
           </div>
+          <p class="product-owner">A product of FOKT Consulting LLC.</p>
           <a href="https://nofodesk.com" class="btn btn-primary product-btn" target="_blank" rel="noopener noreferrer">Visit nofodesk.com →</a>
         </div>
 
@@ -90,7 +124,7 @@
       <p class="sec-body" style="margin-top:1rem;">We start by finding workflows where skilled professionals are wasting hours on avoidable friction. Then we build the simplest tool that eliminates that friction, without adding new ones.</p>
       <div class="about-stats">
         <div class="stat">
-          <div class="stat-value">2026</div>
+          <div class="stat-value">2025</div>
           <div class="stat-label">Founded</div>
         </div>
         <div class="stat">
@@ -101,6 +135,15 @@
           <div class="stat-value">1</div>
           <div class="stat-label">Live product</div>
         </div>
+      </div>
+      <div class="company-info">
+        <h3>Company information</h3>
+        <dl>
+          <dt>Legal name</dt><dd>FOKT Consulting LLC</dd>
+          <dt>Entity type</dt><dd>Wyoming limited liability company</dd>
+          <dt>Formed</dt><dd>November 2025</dd>
+          <dt>Contact</dt><dd><a href="mailto:support@foktconsulting.com">support@foktconsulting.com</a></dd>
+        </dl>
       </div>
     </div>
   </section>
@@ -128,7 +171,7 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        &copy; 2026 FOKT Consulting LLC. All rights reserved. &nbsp;·&nbsp; 1501 South Greeley Hwy, Ste C #1438, Cheyenne, WY 82007, United States
+        &copy; 2026 FOKT Consulting LLC. All rights reserved. &nbsp;·&nbsp; <span data-address>Wyoming, United States</span>
       </div>
     </div>
   </footer>
@@ -149,6 +192,8 @@
       });
     })();
   </script>
+
+  <script src="site.js"></script>
 
 </body>
 </html>

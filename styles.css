@@ -398,6 +398,23 @@ footer{
   margin-top:.2rem;
   font-weight:500;
 }
+.company-info{
+  margin-top:2.5rem;
+  padding-top:2rem;
+  border-top:1px solid var(--border);
+}
+.company-info h3{font-size:.95rem;font-weight:700;margin-bottom:.9rem}
+.company-info dl{
+  display:grid;
+  grid-template-columns:max-content 1fr;
+  gap:.5rem 1.5rem;
+  font-size:.875rem;
+}
+.company-info dt{color:var(--muted);font-weight:500}
+.company-info dd{color:var(--text)}
+.company-info a{color:var(--accent-dark);text-decoration:none}
+.company-info a:hover{text-decoration:underline}
+.product-owner{font-size:.8rem;color:var(--muted);margin-bottom:1rem}
 
 /* ── Legal pages ──────────────────────────────────────── */
 .legal-top{
