@@ -5,18 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Single Audit Findings Remediation for Nonprofits | FOKT Consulting</title>
   <meta name="description" content="We help US nonprofits close repeat Single Audit findings: test map, procedures, corrective action plan and self-test. $2,000 fixed-fee Findings Review.">
+  <meta name="theme-color" content="#14284B">
+  <link rel="canonical" href="https://foktconsulting.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://foktconsulting.com/">
   <meta property="og:site_name" content="FOKT Consulting">
   <meta property="og:title" content="Single Audit Findings Remediation for Nonprofits | FOKT Consulting">
   <meta property="og:description" content="We help US nonprofits close repeat Single Audit findings: test map, procedures, corrective action plan and self-test. $2,000 fixed-fee Findings Review.">
-  <meta name="twitter:card" content="summary">
-  <link rel="canonical" href="https://foktconsulting.com/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <meta property="og:image" content="https://foktconsulting.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FOKT Consulting: Fix your Single Audit findings so they don't come back.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/ibm-plex-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -25,6 +32,8 @@
     "legalName": "FOKT Consulting LLC",
     "url": "https://foktconsulting.com",
     "email": "support@foktconsulting.com",
+    "logo": "https://foktconsulting.com/apple-touch-icon.png",
+    "image": "https://foktconsulting.com/assets/og-image.png",
     "description": "Single Audit findings remediation for US nonprofits that spend federal grant money.",
     "foundingDate": "2025-11",
     "areaServed": "United States",
@@ -36,13 +45,43 @@
       "postalCode": "82801",
       "addressCountry": "US"
     },
+    "founder": {
+      "@type": "Person",
+      "name": "Kelvin Fawehinmi",
+      "jobTitle": "Founder",
+      "image": "https://foktconsulting.com/assets/kelvin-fawehinmi.jpg",
+      "sameAs": ["https://www.linkedin.com/in/oreoluwa-fawehinmi/"]
+    },
     "makesOffer": [
       {
         "@type": "Offer",
         "name": "Findings Review",
-        "description": "Diagnose, fix and prove: auditor test map, written procedures, rewritten corrective action plan and a 25-item self-test. About two weeks.",
+        "description": "One compliance requirement and every finding on it, repeats included: test map, written procedures, corrective action plan, 25-item self-test and funder status note. About two weeks (10 working days). Each additional requirement: $1,000.",
         "price": "2000",
         "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "CAP Implementation Support",
+        "description": "Everything in the Findings Review plus staff training and two monthly evidence checks.",
+        "price": "4500",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Uniform Guidance policies and procedures set",
+        "price": "2500",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Audit Readiness Retainer",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "1000",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        }
       },
       {
         "@type": "Offer",
@@ -51,6 +90,7 @@
           "@type": "SoftwareApplication",
           "name": "NofoDesk",
           "url": "https://nofodesk.com",
+          "description": "Paste a grant URL or a NOFO PDF and NofoDesk extracts every field in about 30 seconds, using schemas built for PEPFAR, USAID, NIH, Gates, WHO and CDC funding notices.",
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Web"
         }
@@ -69,263 +109,406 @@
   <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- ── Navigation ──────────────────────────────────── -->
-  <nav class="nav" aria-label="Main navigation">
-    <div class="wrap">
-      <a href="/" class="nav-logo"><span class="hi">FOKT</span> Consulting</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
+  <nav class="nav" aria-label="Main">
+    <div class="wrap nav__bar">
+      <a href="/" class="brand" aria-label="FOKT Consulting home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#14284B"/><path d="M9 6.5h12.5v3.7H13v3.9h7.4v3.7H13v8.2H9z" fill="#fff"/><path d="M18.6 22.6l2.3 2.3 4.6-5" fill="none" stroke="#5FC4C0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="brand__name">FOKT <span>Consulting</span></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#findings">Audit findings</a></li>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#findings">Findings</a></li>
         <li><a href="#how">How it works</a></li>
-        <li><a href="#products">Software</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn-primary">Book a call</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn--primary">Book a call</a></li>
       </ul>
     </div>
   </nav>
 
   <main id="main">
 
-  <!-- ── Hero ────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Fix your Single Audit findings so they don't come back.</h1>
-      <p>FOKT helps US nonprofits close repeat federal audit findings. We map what your auditor tests, write the procedures, and build a corrective action plan your funder can accept.</p>
-      <div class="hero-cta">
-        <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a 20-minute call</a>
-        <a href="#how" class="btn btn-outline btn-lg">How a Findings Review works</a>
+    <!-- ── Hero ──────────────────────────────────────── -->
+    <header class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="hero__kicker">Single Audit findings remediation</p>
+          <h1>Fix your Single Audit findings so they don’t come back.</h1>
+          <p class="hero__lede">FOKT helps US nonprofits close repeat federal audit findings. We map what your auditor tests, write the procedures, and build a corrective action plan your funder can accept.</p>
+          <div class="hero__actions">
+            <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn--primary">Book a 20-minute call</a>
+            <a href="#retest" class="btn btn--quiet">Get a free retest note</a>
+          </div>
+          <p class="hero__sample"><a href="/assets/samples/fokt-sample-retest-note-allowable-costs.pdf" target="_blank" rel="noopener">See a sample note (PDF, 1 page)</a></p>
+          <div class="byline">
+            <picture>
+              <source srcset="/assets/kelvin-fawehinmi-face.webp" type="image/webp">
+              <img src="/assets/kelvin-fawehinmi-face.jpg" alt="" width="56" height="56">
+            </picture>
+            <p><strong>Kelvin Fawehinmi, founder.</strong> Federal grants compliance since 2022 across PEPFAR, NIH, USAID and Global Fund awards · 2 CFR 200 · OMB Compliance Supplement</p>
+          </div>
+        </div>
+
+        <figure class="workpaper" aria-labelledby="wpCaption">
+          <div class="workpaper__sheet">
+            <div class="workpaper__top"><span>Schedule of findings</span><span>Example</span></div>
+            <p class="workpaper__ref">Finding 2024-003</p>
+            <p class="workpaper__title">Allowable costs/cost principles</p>
+            <p class="workpaper__program">Continuum of Care Program · ALN 14.267</p>
+            <p class="stamp">Repeat finding<span>Prior year 2023-002</span></p>
+            <dl class="workpaper__rows">
+              <div class="wp-row">
+                <dt>Criteria</dt>
+                <dd>Costs must be adequately documented. <span class="cite">2 CFR 200.403(g)</span></dd>
+              </div>
+              <div class="wp-row">
+                <dt>Condition</dt>
+                <dd>Sampled charges had no documented approval or allocation basis.</dd>
+              </div>
+              <div class="wp-row">
+                <dt>Cause</dt>
+                <dd><span class="was">Policy updated; approval step unchanged.</span><span class="note">Fixed: the approval step now leaves a signed record.</span></dd>
+                <svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4" pathLength="1"/></svg>
+              </div>
+              <div class="wp-row">
+                <dt>Corrective action</dt>
+                <dd>Two-step approval with the allocation basis recorded at entry. Owner: Controller.</dd>
+                <svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4" pathLength="1"/></svg>
+              </div>
+              <div class="wp-row">
+                <dt>Self-test</dt>
+                <dd>25 transactions after the fix, retested with evidence kept on file.</dd>
+                <svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4" pathLength="1"/></svg>
+              </div>
+            </dl>
+            <div class="workpaper__legend">
+              <span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg>Fixed in a Findings Review</span>
+            </div>
+          </div>
+          <figcaption id="wpCaption">Illustrative example of a repeat finding and how a Findings Review fixes it. Not a client finding.</figcaption>
+        </figure>
       </div>
-      <p class="hero-cred">Federal grants compliance since 2022 across PEPFAR, NIH, USAID and Global Fund awards · 2 CFR 200 · OMB Compliance Supplement</p>
-    </div>
-  </section>
+    </header>
 
-  <!-- ── Findings we fix ─────────────────────────────── -->
-  <section class="sec" id="findings">
-    <div class="wrap">
-      <p class="sec-label">Audit findings</p>
-      <h2 class="sec-title">Findings we fix</h2>
-      <p class="sec-body">The compliance requirements behind most nonprofit Single Audit findings.</p>
-      <ul class="findings-grid">
-        <li class="finding">
-          <h3>Allowable costs &amp; activities</h3>
-          <p>Charges approved without support or an allocation method.</p>
-        </li>
-        <li class="finding">
-          <h3>Reporting</h3>
-          <p>Federal reports that don't tie to the ledger; late FAC filings.</p>
-        </li>
-        <li class="finding">
-          <h3>Procurement &amp; debarment</h3>
-          <p>Missing quotes, price analysis or SAM.gov checks.</p>
-        </li>
-        <li class="finding">
-          <h3>Cash management</h3>
-          <p>Draws ahead of expenses; no reconciliation.</p>
-        </li>
-        <li class="finding">
-          <h3>Eligibility</h3>
-          <p>Participant files missing documents or a second review.</p>
-        </li>
-        <li class="finding">
-          <h3>Special tests</h3>
-          <p>Program-specific rules such as sliding fee discounts.</p>
-        </li>
-        <li class="finding">
-          <h3>Internal control</h3>
-          <p>Segregation of duties and weak year-end close.</p>
-        </li>
-        <li class="finding">
-          <h3>Subrecipient monitoring</h3>
-          <p>No risk assessment, incomplete subawards.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ── How a Findings Review works ─────────────────── -->
-  <section class="sec sec-alt" id="how">
-    <div class="wrap">
-      <p class="sec-label">How it works</p>
-      <h2 class="sec-title">How a Findings Review works</h2>
-      <ol class="steps">
-        <li class="step">
-          <div class="step-num" aria-hidden="true">1</div>
-          <h3>Diagnose</h3>
-          <p>We read your finding, CAP and procedures, and map exactly what the auditor tests against what you do now.</p>
-        </li>
-        <li class="step">
-          <div class="step-num" aria-hidden="true">2</div>
-          <h3>Fix</h3>
-          <p>We write the procedures and the evidence each step leaves, and rewrite your corrective action plan with owners and dates.</p>
-        </li>
-        <li class="step">
-          <div class="step-num" aria-hidden="true">3</div>
-          <h3>Prove</h3>
-          <p>We run a 25-item self-test on transactions after the fix, and draft the status note to your funder.</p>
-        </li>
-      </ol>
-      <div class="price-box">
+    <!-- ── Why findings repeat ───────────────────────── -->
+    <section class="section section--wash" id="why" aria-labelledby="whyTitle">
+      <div class="wrap why">
         <div>
-          <p class="price-title">Findings Review: $2,000 fixed</p>
-          <p class="price-detail">About two weeks, 50% to start. About 2 hours of your team's time.</p>
+          <h2 id="whyTitle">Why findings repeat</h2>
+          <p class="why__body">Most repeat findings aren’t a policy problem. The policy gets updated, but nothing changes at the approval step, and nothing records that the step happened. The auditor samples next year’s transactions and finds the same gap. We fix the step and the evidence, not just the manual.</p>
         </div>
-        <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a 20-minute call</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Why findings repeat ─────────────────────────── -->
-  <section class="sec" id="why">
-    <div class="wrap narrow">
-      <h2 class="sec-title">Why findings repeat</h2>
-      <p class="sec-body">Most repeat findings aren't a policy problem. The policy gets updated, but nothing changes at the approval step, and nothing records that the step happened. The auditor samples next year's transactions and finds the same gap. We fix the step and the evidence, not just the manual.</p>
-    </div>
-  </section>
-
-  <!-- ── Free retest note ────────────────────────────── -->
-  <section class="sec sec-tight" id="retest">
-    <div class="wrap">
-      <div class="retest-box">
-        <h2>Free retest note</h2>
-        <p>Get the one-page note on what your auditor is likely to retest for your finding. Free, no call needed.</p>
-        <a href="mailto:kelvin@foktconsulting.com?subject=Retest%20note%20request" class="btn btn-outline">Email us for the retest note</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FAQ ─────────────────────────────────────────── -->
-  <section class="sec" id="faq">
-    <div class="wrap narrow">
-      <p class="sec-label">FAQ</p>
-      <h2 class="sec-title">Common questions</h2>
-      <div class="faq">
-        <details>
-          <summary>Are you a CPA firm?</summary>
-          <p>No, and that's deliberate. We aren't your auditor, so there's no independence conflict. Your CPA audits; we do the remediation work: procedures, controls and evidence.</p>
-        </details>
-        <details>
-          <summary>Can we charge this to our grant?</summary>
-          <p>Consulting fees are generally allowable as professional service costs under 2 CFR 200.459 when reasonable and allocable, usually through indirect or administrative costs. Confirm against your award terms and budget.</p>
-        </details>
-        <details>
-          <summary>Do you need our patient or client records?</summary>
-          <p>No. We work from de-identified samples or by screen-share.</p>
-        </details>
-        <details>
-          <summary>Will this close our finding?</summary>
-          <p>Closure is decided by your auditor and your funder. We deliver the controls and the evidence they look for.</p>
-        </details>
-        <details>
-          <summary>Where do you work?</summary>
-          <p>Remotely, with clients across the US, during US business hours.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Software ────────────────────────────────────── -->
-  <section class="sec sec-alt" id="products">
-    <div class="wrap">
-      <p class="sec-label">Software</p>
-      <h2 class="sec-title">Software we build</h2>
-      <p class="sec-body">We also build tools for grant professionals.</p>
-      <div class="products-grid">
-
-        <div class="product-card">
-          <div class="product-header">
-            <div class="product-logo"><span class="hi">Nofo</span>Desk</div>
-            <span class="product-status product-status--live">Live</span>
-          </div>
-          <p class="product-desc">AI-powered grant management platform for grant writers, program managers, and research administrators. Extract key data from any funding notice in seconds, write proposals with AI, track deadlines, and manage your full pipeline in one place.</p>
-          <div class="product-tags">
-            <span class="tag">Grant Management</span>
-            <span class="tag">AI Extraction</span>
-            <span class="tag">Proposal Writing</span>
-            <span class="tag">Team Collaboration</span>
-          </div>
-          <p class="product-owner">A product of FOKT Consulting LLC.</p>
-          <a href="https://nofodesk.com" class="btn btn-primary product-btn" target="_blank" rel="noopener noreferrer">Visit nofodesk.com →</a>
+        <div>
+          <ol class="cycle" aria-label="How a finding repeats">
+            <li><span>Your auditor reports a finding.</span><span class="cycle__status cycle__status--ok">Reported</span></li>
+            <li><span>The policy manual gets updated.</span><span class="cycle__status cycle__status--ok">Done</span></li>
+            <li class="is-gap"><span>The approval step stays the same.</span><span class="cycle__status cycle__status--gap">Gap</span></li>
+            <li class="is-gap"><span>Nothing records that the step happened.</span><span class="cycle__status cycle__status--gap">Gap</span></li>
+            <li class="is-repeat"><span>Next year’s sample finds the same gap.</span><span class="cycle__status cycle__status--gap">Repeat</span></li>
+          </ol>
+          <p class="cycle__fix"><strong>A Findings Review fixes steps 3 and 4:</strong> the approval step and the record it leaves.</p>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── About ─────────────────────────────────────────── -->
-  <section class="sec" id="about">
-    <div class="wrap about-wrap">
-      <p class="sec-label">About</p>
-      <h2 class="sec-title">Who we are</h2>
-      <p class="sec-body">FOKT Consulting LLC is a Wyoming company founded in 2025.</p>
-      <div class="founder">
-        <picture>
-          <source srcset="assets/kelvin-fawehinmi.webp" type="image/webp">
-          <img src="assets/kelvin-fawehinmi.jpg" alt="Kelvin Fawehinmi, founder of FOKT Consulting" width="600" height="750" loading="lazy" class="founder-photo">
+    <!-- ── Findings we fix ───────────────────────────── -->
+    <section class="section" id="findings" aria-labelledby="findingsTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="findingsTitle">Findings we fix</h2>
+          <p>Find the compliance requirement named in your finding.</p>
+        </div>
+        <ul class="req-index">
+          <li class="req"><span class="req__code">A·B</span><div><h3>Allowable costs &amp; activities</h3><p>Charges approved without support or an allocation method.</p></div></li>
+          <li class="req"><span class="req__code">L</span><div><h3>Reporting</h3><p>Federal reports that don’t tie to the ledger; late FAC filings.</p></div></li>
+          <li class="req"><span class="req__code">I</span><div><h3>Procurement &amp; debarment</h3><p>Missing quotes, price analysis or SAM.gov checks.</p></div></li>
+          <li class="req"><span class="req__code">C</span><div><h3>Cash management</h3><p>Draws ahead of expenses; no reconciliation.</p></div></li>
+          <li class="req"><span class="req__code">E</span><div><h3>Eligibility</h3><p>Participant files missing documents or a second review.</p></div></li>
+          <li class="req"><span class="req__code">N</span><div><h3>Special tests</h3><p>Program-specific rules such as sliding fee discounts.</p></div></li>
+          <li class="req"><span class="req__code">Sec. II</span><div><h3>Internal control</h3><p>Segregation of duties and weak year-end close.</p></div></li>
+          <li class="req"><span class="req__code">M</span><div><h3>Subrecipient monitoring</h3><p>No risk assessment, incomplete subawards.</p></div></li>
+        </ul>
+        <p class="req-note">Letters follow Part 3 of the OMB Compliance Supplement. <span class="mono">Sec. II</span> is the financial statement findings section of your Schedule of Findings and Questioned Costs.</p>
+        <p class="req-note">Equipment, period of performance, matching and program income findings too. Ask on the call.</p>
+      </div>
+    </section>
+
+    <!-- ── How a Findings Review works + fee ─────────── -->
+    <section class="section section--wash" id="how" aria-labelledby="howTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="howTitle">How a Findings Review works</h2>
+          <p>About two weeks (10 working days) from start to finish, and about 3–4 hours of your team’s time, plus documents.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3>Diagnose</h3>
+            <p class="step__call">60-minute kickoff call</p>
+            <p class="step__text">We read your finding, CAP and procedures, and map exactly what the auditor tests against what you do now.</p>
+            <p class="step__out"><b>You receive</b>Test map (Excel)</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3>Fix</h3>
+            <p class="step__call">30-minute review call</p>
+            <p class="step__text">We write the procedures and the evidence each step leaves, and rewrite your corrective action plan with owners and dates.</p>
+            <p class="step__out"><b>You receive</b>Written procedures and corrective action plan (Word)</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3>Prove</h3>
+            <p class="step__call">60-minute handover call</p>
+            <p class="step__text">We run a 25-item self-test on transactions after the fix, and draft the status note to your funder.</p>
+            <p class="step__out"><b>You receive</b>25-item self-test (Excel) and funder status note (Word)</p>
+          </li>
+        </ol>
+
+        <div class="fee" id="pricing">
+          <div class="fee__main">
+            <div class="fee__card">
+              <p class="fee__label">Fee</p>
+              <div class="fee__head">
+                <h3 class="fee__name">Findings Review</h3>
+                <p class="fee__price">$2,000<small>fixed</small></p>
+              </div>
+              <p class="fee__scope">One compliance requirement and every finding on it, repeats included. Each additional requirement: +$1,000.</p>
+              <dl class="fee__terms">
+                <div><dt>Timeline</dt><dd>About two weeks (10 working days)</dd></div>
+                <div><dt>Payment</dt><dd>50% to start, 50% on delivery</dd></div>
+                <div><dt>Your team’s time</dt><dd>About 3–4 hours, plus documents</dd></div>
+              </dl>
+              <h4 class="fee__incl">You receive</h4>
+              <ul class="ticks">
+                <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><span>Test map</span></li>
+                <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><span>Written procedures</span></li>
+                <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><span>Corrective action plan</span></li>
+                <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><span>25-item self-test</span></li>
+                <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><span>Funder status note</span></li>
+              </ul>
+              <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn--primary">Book a 20-minute call</a>
+              <p class="fee__fine">Invoices are payable within 7 days, and work starts when the deposit arrives. We invoice in US dollars from FOKT Consulting LLC. Payment details are on the invoice.</p>
+            </div>
+            <div class="fee__more">
+              <h4>Also available</h4>
+              <ul>
+                <li>CAP Implementation Support: everything in the Review plus staff training and two monthly evidence checks, $4,500</li>
+                <li>Uniform Guidance policies and procedures set, $2,500</li>
+                <li>Audit Readiness Retainer, $1,000 a month</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="fee__notes">
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><div><strong>Not a CPA firm</strong><span>We don’t audit you, so there’s no independence conflict with your auditor.</span></div></li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><div><strong>Can be charged to your award</strong><span>Consulting fees are generally allowable professional service costs under 2 CFR 200.459. Confirm against your award terms.</span></div></li>
+            <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><div><strong>Below the micro-purchase threshold</strong><span>At $2,000, a Findings Review is below the $15,000 federal micro-purchase threshold. We’ll send a written quote and scope for your purchase file. <a href="#faq">Read the FAQ</a></span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── About ─────────────────────────────────────── -->
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="wrap about">
+        <picture class="about__photo">
+          <source srcset="/assets/kelvin-fawehinmi.webp" type="image/webp">
+          <img src="/assets/kelvin-fawehinmi.jpg" alt="Kelvin Fawehinmi, founder of FOKT Consulting" width="600" height="750" loading="lazy">
         </picture>
-        <div class="founder-bio">
-          <h3>Kelvin Fawehinmi, Founder</h3>
-          <p>Kelvin has worked in grants and contracts compliance since 2022. He manages multi-donor portfolios funded by PEPFAR, NIH, USAID, the Global Fund and WHO, so he works with 2 CFR 200, award terms and audit follow-up every day.</p>
+        <div class="about__body">
+          <h2 id="aboutTitle">Who you’ll work with</h2>
+          <h3 class="about__name">Kelvin Fawehinmi, Founder</h3>
+          <p class="about__bio">Kelvin Fawehinmi has worked in grants and contracts management since 2022 at a Nigerian health research institute funded by PEPFAR, NIH, USAID, the Global Fund and WHO. His work covers the full award lifecycle: budgets and pre-award, award modifications, subaward agreements with dozens of partner organizations, donor reporting and close-out, all under the Uniform Guidance (2 CFR 200) and each funder’s terms.</p>
+          <p class="about__bio">He founded FOKT Consulting in 2025 to help US nonprofits fix Single Audit findings for good. He also builds the tools behind the work, including NofoDesk, which pulls every field out of a grant funding notice in about 30 seconds. He has a BSc in Industrial Mathematics from the University of Lagos and works remotely from Abuja, Nigeria, taking client calls on US Eastern time.</p>
+          <p class="about__company">FOKT Consulting LLC is a Wyoming company founded in 2025.</p>
+          <div class="about__actions">
+            <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn--quiet">Book a call with Kelvin</a>
+            <a href="https://www.linkedin.com/in/oreoluwa-fawehinmi/" target="_blank" rel="noopener" class="about__link">Kelvin on LinkedIn</a>
+          </div>
         </div>
       </div>
-      <div class="about-stats">
-        <div class="stat">
-          <div class="stat-value">2025</div>
-          <div class="stat-label">Founded</div>
+    </section>
+
+    <!-- ── Free retest note ──────────────────────────── -->
+    <section class="retest" id="retest" aria-labelledby="retestTitle">
+      <div class="wrap retest__inner">
+        <div>
+          <h2 id="retestTitle">Free retest note</h2>
+          <p class="retest__text">Get the one-page note on what your auditor is likely to retest for your finding. Free, no call needed.</p>
+          <p class="retest__hint">Include your organization, the finding number or area, and the audit year. The note you get back is matched to your finding.</p>
         </div>
-        <div class="stat">
-          <div class="stat-value">Wyoming</div>
-          <div class="stat-label">United States</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">1</div>
-          <div class="stat-label">Live product</div>
+        <div class="retest__action">
+          <a href="mailto:kelvin@foktconsulting.com?subject=Retest%20note%20request&amp;body=Organization%3A%20%0AFinding%20number%20or%20area%3A%20%0AAudit%20year%3A%20%0A" class="btn btn--primary">Email for the free retest note</a>
+          <p class="retest__alt"><a href="/assets/samples/fokt-sample-retest-note-allowable-costs.pdf" target="_blank" rel="noopener">See a sample note (PDF, 1 page)</a></p>
+          <p class="retest__alt">or write to <a href="mailto:kelvin@foktconsulting.com?subject=Retest%20note%20request">kelvin@foktconsulting.com</a></p>
         </div>
       </div>
-      <div class="company-info">
-        <h3>Company information</h3>
-        <dl>
-          <dt>Legal name</dt><dd>FOKT Consulting LLC</dd>
-          <dt>Entity type</dt><dd>Wyoming limited liability company</dd>
-          <dt>Formed</dt><dd>November 2025</dd>
-          <dt>Contact</dt><dd><a href="mailto:support@foktconsulting.com">support@foktconsulting.com</a></dd>
-        </dl>
+    </section>
+
+    <!-- ── FAQ ───────────────────────────────────────── -->
+    <section class="section" id="faq" aria-labelledby="faqTitle">
+      <div class="wrap faq-layout">
+        <div class="faq-layout__intro">
+          <h2 id="faqTitle">Common questions</h2>
+          <p>Something else? Email <a href="mailto:kelvin@foktconsulting.com">kelvin@foktconsulting.com</a> or book a 20-minute call.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Are you a CPA firm?</summary>
+            <div class="faq__a"><p>No, and that’s deliberate. We aren’t your auditor, so there’s no independence conflict. Your CPA audits; we do the remediation work: procedures, controls and evidence.</p></div>
+          </details>
+          <details>
+            <summary>Will this close our finding?</summary>
+            <div class="faq__a"><p>Closure is decided by your auditor and your funder. We deliver the controls and the evidence they look for.</p></div>
+          </details>
+          <details>
+            <summary>What exactly do we receive?</summary>
+            <div class="faq__a">
+              <p>Five deliverables, as editable Word and Excel files plus PDFs, in a shared folder:</p>
+              <ol>
+                <li><strong>Test map</strong> (Excel): what your auditor tests for each affected requirement under the OMB Compliance Supplement, compared with what you do now, with the gaps marked.</li>
+                <li><strong>Written procedures</strong> (Word): new or revised steps that close each gap, and the record each step leaves.</li>
+                <li><strong>Corrective action plan</strong> (Word): owners, completion dates and the evidence that shows each action works, in the form 2 CFR 200.511(c) requires.</li>
+                <li><strong>25-item self-test</strong> (Excel): we design it, your team pulls de-identified items dated after the fix, and we test them and explain any exceptions.</li>
+                <li><strong>Funder status note</strong> (Word): a draft for you to send on your letterhead to your awarding agency or pass-through entity.</li>
+              </ol>
+              <p>You also get three video calls: a 60-minute kickoff, a 30-minute review and a 60-minute handover. After handover, you can email questions for 30 days.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What if our findings cover more than one area?</summary>
+            <div class="faq__a"><p>$2,000 covers one compliance requirement (one letter code, for example I – Procurement) and every finding on it in your latest audit, repeats included. Each additional requirement in the same review costs $1,000, so two requirements are $3,000 and three are $4,000.</p></div>
+          </details>
+          <details>
+            <summary>Can we charge this to our grant?</summary>
+            <div class="faq__a"><p>Consulting fees are generally allowable as professional service costs under 2 CFR 200.459 when reasonable and allocable, usually through indirect or administrative costs. Confirm against your award terms and budget.</p></div>
+          </details>
+          <details>
+            <summary>Do we need competitive quotes to hire you?</summary>
+            <div class="faq__a"><p>Not under the federal rules. A Findings Review costs $2,000, below the federal micro-purchase threshold of $15,000. (2 CFR 200.1 and 200.320(a)(1) use the FAR figure, which rose to $15,000 on October 1, 2025.) You can make a micro-purchase without quotes if you consider the price reasonable and note why in your file. Your own procurement policy may set a lower limit, so check it. Either way, we’ll send a written quote and scope for your purchase file.</p></div>
+          </details>
+          <details>
+            <summary>Will you talk to our auditor or funder?</summary>
+            <div class="faq__a"><p>Yes, with your written OK. We can join your call with the auditor or funder to walk through the test map and the corrective actions. We don’t represent you, sign anything for you, or argue questioned costs. The status note goes out on your letterhead, signed by you.</p></div>
+          </details>
+          <details>
+            <summary>Will you sign our NDA, and do you need patient records?</summary>
+            <div class="faq__a"><p>Yes. Confidentiality is built into our engagement letter, and we’ll sign your mutual NDA. We don’t take patient records, Social Security numbers or other sensitive personal data. We work from de-identified samples or by screen-share.</p></div>
+          </details>
+          <details>
+            <summary>How soon can you start?</summary>
+            <div class="faq__a"><p>We take on two reviews at a time, so each one gets full attention. If we’re full, we’ll give you the next start date on the call. Work starts when the deposit arrives.</p></div>
+          </details>
+          <details>
+            <summary>What happens after handover?</summary>
+            <div class="faq__a"><p>You can email questions for 30 days after handover. We also check in a month before your next audit fieldwork.</p></div>
+          </details>
+          <details>
+            <summary>Where do you work?</summary>
+            <div class="faq__a"><p>Remotely, from Abuja, Nigeria, with nonprofits anywhere in the US. Calls run Monday to Friday, 12–3 pm Eastern. Emails get a reply within one US business day.</p></div>
+          </details>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ── Software ──────────────────────────────────── -->
+    <section class="section section--wash" id="software" aria-labelledby="softwareTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="softwareTitle">Software we build</h2>
+          <p>We also build tools for grant professionals.</p>
+        </div>
+        <article class="product">
+          <div>
+            <div class="product__head">
+              <picture>
+                <source srcset="/assets/nofodesk-logo.webp" type="image/webp">
+                <img class="product__logo" src="/assets/nofodesk-logo.png" alt="" width="48" height="48" loading="lazy">
+              </picture>
+              <h3 class="product__name">NofoDesk</h3>
+              <span class="status">Live</span>
+            </div>
+            <p class="product__desc">Paste a grant URL or a NOFO PDF and NofoDesk extracts every field in about 30 seconds, using schemas built for PEPFAR, USAID, NIH, Gates, WHO and CDC funding notices.</p>
+            <ul class="ticks product__features">
+              <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><span>Paste a URL or upload a NOFO PDF</span></li>
+              <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><span>Every field extracted in about 30 seconds</span></li>
+              <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.4l3 3 6-6.4"/></svg><span>Funder-specific schemas for PEPFAR, USAID, NIH, Gates, WHO and CDC</span></li>
+            </ul>
+          </div>
+          <div class="product__side">
+            <p>A product of FOKT Consulting LLC.</p>
+            <a href="https://nofodesk.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Try NofoDesk</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Closing call to action ────────────────────── -->
+    <section class="closing" aria-labelledby="closingTitle">
+      <div class="wrap closing__inner">
+        <div>
+          <h2 id="closingTitle">Have a finding in your latest Single Audit?</h2>
+          <p class="closing__text">Book a 20-minute call. Bring the finding number, and we’ll look at what your auditor is likely to retest and whether a Findings Review fits.</p>
+        </div>
+        <div class="closing__actions">
+          <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn--light">Book a 20-minute call</a>
+          <a href="mailto:kelvin@foktconsulting.com" class="closing__mail">kelvin@foktconsulting.com</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- ── Contact ─────────────────────────────────────── -->
-  <footer id="contact">
+  <!-- ── Footer ────────────────────────────────────── -->
+  <footer class="footer" id="contact">
     <div class="wrap">
-      <div class="footer-top">
-        <div>
-          <a href="/" class="footer-logo"><span class="hi">FOKT</span> Consulting LLC</a>
-          <p class="footer-desc">Single Audit findings remediation for US nonprofits.</p>
-          <a href="mailto:support@foktconsulting.com" class="footer-email">support@foktconsulting.com</a>
-          <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="footer-email">Book a 20-minute call</a>
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/" class="brand" aria-label="FOKT Consulting home">
+            <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#fff"/><path d="M9 6.5h12.5v3.7H13v3.9h7.4v3.7H13v8.2H9z" fill="#14284B"/><path d="M18.6 22.6l2.3 2.3 4.6-5" fill="none" stroke="#0E7C7B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="brand__name">FOKT <span>Consulting</span></span>
+          </a>
+          <p class="footer__desc">Single Audit findings remediation for US nonprofits.</p>
+          <div class="footer__contact">
+            <a href="mailto:kelvin@foktconsulting.com">kelvin@foktconsulting.com</a>
+            <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener">Book a 20-minute call</a>
+            <a href="https://www.linkedin.com/in/oreoluwa-fawehinmi/" target="_blank" rel="noopener">Kelvin on LinkedIn</a>
+          </div>
+          <p class="footer__hours">Calls: Monday–Friday, 12–3 pm ET, booked online. Email replies within one US business day.</p>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <div class="footer-col">
-            <h2>Products</h2>
-            <a href="https://nofodesk.com" target="_blank" rel="noopener noreferrer">NofoDesk</a>
-          </div>
-          <div class="footer-col">
-            <h2>Legal</h2>
-            <a href="terms.html">Terms of Service</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="refund.html">Refund &amp; Cancellation</a>
-          </div>
+        <nav class="footer__col" aria-labelledby="footServices">
+          <h2 id="footServices">Services</h2>
+          <ul>
+            <li><a href="#how">Findings Review</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#retest">Free retest note</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footSoftware">
+          <h2 id="footSoftware">Software</h2>
+          <ul>
+            <li><a href="https://nofodesk.com" target="_blank" rel="noopener noreferrer">NofoDesk</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footLegal">
+          <h2 id="footLegal">Legal</h2>
+          <ul>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/refund">Refund &amp; Cancellation</a></li>
+          </ul>
         </nav>
       </div>
-      <div class="footer-bottom">
-        &copy; 2026 FOKT Consulting LLC. All rights reserved. &nbsp;·&nbsp; 30 N Gould St Ste R, Sheridan, WY 82801, United States
-      </div>
+      <dl class="company">
+        <div><dt>Legal name</dt><dd>FOKT Consulting LLC</dd></div>
+        <div><dt>Entity</dt><dd>Wyoming limited liability company, formed November 2025</dd></div>
+        <div><dt>Mailing address</dt><dd>30 N Gould St Ste R, Sheridan, WY 82801, United States</dd></div>
+        <div><dt>Company contact</dt><dd><a href="mailto:support@foktconsulting.com">support@foktconsulting.com</a></dd></div>
+      </dl>
+      <p class="footer__legal">&copy; 2026 FOKT Consulting LLC. All rights reserved.</p>
     </div>
   </footer>
 
@@ -333,16 +516,14 @@
     (function(){
       var toggle = document.getElementById('navToggle');
       var links  = document.getElementById('navLinks');
-      toggle.addEventListener('click', function(){
-        var open = links.classList.toggle('open');
+      function setOpen(open){
+        links.classList.toggle('is-open', open);
         toggle.setAttribute('aria-expanded', open);
-      });
-      links.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          links.classList.remove('open');
-          toggle.setAttribute('aria-expanded', false);
-        });
-      });
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      }
+      toggle.addEventListener('click', function(){ setOpen(!links.classList.contains('is-open')); });
+      links.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
     })();
   </script>
 
