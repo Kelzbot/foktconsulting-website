@@ -1,0 +1,4 @@
+# Files Cloudflare must not publish (same syntax as .gitignore)
+.git
+.assetsignore
+README.md
