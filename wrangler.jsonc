@@ -1,0 +1,11 @@
+// Cloudflare Worker config for foktconsulting.com (static assets only).
+// Workers Builds runs `npx wrangler deploy` on every push to master.
+{
+  "name": "foktconsulting-website",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./",
+    // Serve 404.html (with a 404 status) for any URL that doesn't match a file.
+    "not_found_handling": "404-page"
+  }
+}

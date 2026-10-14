@@ -1,4 +1,6 @@
 # Files Cloudflare must not publish (same syntax as .gitignore)
 .git
 .assetsignore
+.wrangler
 README.md
+wrangler.jsonc
