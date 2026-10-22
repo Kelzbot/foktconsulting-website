@@ -9,6 +9,7 @@
 // Status "draft" or "hold" keeps it off the site whatever the date.
 //
 // Output (all generated, never edit by hand): blog/<slug>.html, blog/index.html, blog/feed.xml,
+// blog/posts.json (read by the PostPilot tracker),
 // and the blog entries in sitemap.xml. Pages for posts that are no longer due are removed, so
 // putting a post on hold takes it down at the next build.
 //
@@ -329,6 +330,8 @@ mkdirSync(OUT, { recursive: true });
 due.forEach((p, i) => writeFileSync(join(OUT, `${p.slug}.html`), articlePage(p, due[i - 1], due[i + 1])));
 writeFileSync(join(OUT, "index.html"), indexPage(due));
 writeFileSync(join(OUT, "feed.xml"), feed(due));
+// For the PostPilot tracker: every published post with its date (CORS-enabled in _headers).
+writeFileSync(join(OUT, "posts.json"), JSON.stringify(due.map((p) => ({ slug: p.slug, title: p.title, date: p.date })), null, 1));
 if (!previewAll) updateSitemap(due);
 
 const upcoming = all.filter((p) => !due.includes(p)).sort((a, b) => a.date.localeCompare(b.date));
