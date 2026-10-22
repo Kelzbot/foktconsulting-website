@@ -1,0 +1,41 @@
+# Publishes blog posts on their date. Every morning at 07:00 Lagos (06:00 UTC), and on demand,
+# this rebuilds blog/ from blog-src/posts and commits the result if anything changed. The push
+# to master is what makes Cloudflare Workers Builds deploy the site.
+name: Publish due blog posts
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths: ["blog-src/**", "scripts/build-blog.mjs"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-blog
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the posts that are due
+        run: node scripts/build-blog.mjs
+      - name: Commit if anything changed
+        run: |
+          if [ -z "$(git status --porcelain blog sitemap.xml)" ]; then
+            echo "Nothing new to publish."
+            exit 0
+          fi
+          git config user.name "fokt-blog-bot"
+          git config user.email "fokt-blog-bot@users.noreply.github.com"
+          git add blog sitemap.xml
+          git commit -m "blog: publish posts due $(TZ=Africa/Lagos date +%F)"
+          git push

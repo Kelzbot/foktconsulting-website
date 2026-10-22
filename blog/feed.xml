@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>FOKT Consulting blog</title>
+    <link>https://foktconsulting.com/blog</link>
+    <description>Single Audit findings, corrective action plans and the Uniform Guidance, in plain English.</description>
+    <language>en-us</language>
+    <item>
+      <title>What is a Single Audit finding? A plain-English guide for nonprofit leaders</title>
+      <link>https://foktconsulting.com/blog/what-is-a-single-audit-finding</link>
+      <guid>https://foktconsulting.com/blog/what-is-a-single-audit-finding</guid>
+      <pubDate>Thu, 22 Oct 2026 11:00:00 GMT</pubDate>
+      <description>A Single Audit finding is a documented gap between what the federal rules require and what your organization did. Here is how to read one, part by part.</description>
+    </item>
+  </channel>
+</rss>

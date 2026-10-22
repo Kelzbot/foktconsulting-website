@@ -494,3 +494,39 @@ ul,ol{list-style:none}
   .stamp{animation-name:stamp-in-m}
 }
 @keyframes stamp-in-m{from{opacity:0;transform:rotate(-3deg) scale(1.3)}to{opacity:1;transform:rotate(-3deg) scale(1)}}
+
+/* ── Blog ────────────────────────────────────────────── */
+.post-list{list-style:none;max-width:760px;padding:48px 0 88px;margin:0}
+.post-list__item{padding:28px 0;border-bottom:1px solid var(--rule)}
+.post-list__item:first-child{padding-top:0}
+.post-list__date{font-size:.9rem;color:var(--muted)}
+.post-list__item h2{margin-top:6px;font-size:clamp(1.35rem,2.4vw,1.65rem)}
+.post-list__item h2 a{color:var(--ink);text-decoration:none}
+.post-list__item h2 a:hover{text-decoration:underline}
+.post-list__item p:last-child{margin-top:8px;color:#2E3746;line-height:1.65}
+
+.post-body{max-width:720px;padding-top:48px;padding-bottom:88px;font-size:1.075rem}
+.post-body > p,.post-body li{color:#2E3746;line-height:1.8}
+.post-body > p{margin-bottom:18px}
+.post-body h2{font-size:clamp(1.4rem,2.6vw,1.75rem);margin:44px 0 14px}
+.post-body h3{font-family:var(--sans);font-weight:700;font-size:1.1rem;margin:30px 0 10px;color:var(--ink)}
+.post-body ul,.post-body ol{margin:0 0 18px 1.3rem}
+.post-body li{margin-bottom:8px}
+.post-body blockquote{margin:24px 0;padding:16px 20px;border-left:3px solid var(--teal);background:var(--wash);border-radius:0 8px 8px 0}
+.post-body blockquote p{margin:0;color:var(--text);line-height:1.7}
+.post-body .cite{font-family:var(--mono);font-size:.88em;white-space:nowrap}
+.post-body table{width:100%;border-collapse:collapse;margin:20px 0 24px;font-size:.95rem}
+.post-body th,.post-body td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+.post-body th{color:var(--ink);font-weight:700;background:var(--wash)}
+.post-cta{margin-top:48px;padding:28px;border-radius:14px;background:var(--ink);color:var(--on-ink)}
+.post-cta p{color:var(--on-ink);line-height:1.7}
+.post-cta__title{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:#fff !important;margin-bottom:8px}
+.post-cta .hero__actions{margin-top:20px}
+.post-cta .btn--primary{background:#fff;border-color:#fff;color:var(--ink)}
+.post-cta .btn--quiet{background:transparent;border-color:var(--on-ink);color:#fff}
+.post-nav{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.post-nav a{display:block;padding:16px;border:1px solid var(--rule);border-radius:10px;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.4}
+.post-nav a:last-child{text-align:right}
+.post-nav a span{display:block;font-size:.8rem;font-weight:500;color:var(--muted);margin-bottom:4px}
+.post-nav a:hover{background:var(--wash)}
+@media (max-width:640px){.post-nav{grid-template-columns:1fr}.post-nav a:last-child{text-align:left}.post-body table{display:block;overflow-x:auto}}

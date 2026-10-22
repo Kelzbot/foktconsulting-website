@@ -4,3 +4,6 @@
 .wrangler
 README.md
 wrangler.jsonc
+blog-src
+scripts
+.github
