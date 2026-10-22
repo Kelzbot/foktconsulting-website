@@ -193,7 +193,31 @@ const CLOSING = `
           </div>
         </aside>`;
 
-function articlePage(post, newer, older) {
+const STOP = new Set("a an and are as at be by can do does for from how i if in is it its of on or the to vs what when why with you your actually".split(" "));
+const words = (p) => new Set(`${p.title} ${p.description}`.toLowerCase().match(/[a-z0-9]+/g).filter((w) => w.length > 2 && !STOP.has(w)));
+
+/** Up to three published posts that share the most words with this one. Never links ahead. */
+function related(post, pool) {
+  const mine = words(post);
+  return pool
+    .filter((p) => p.slug !== post.slug)
+    .map((p) => ({ p, score: [...words(p)].filter((w) => mine.has(w)).length }))
+    .filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score || b.p.date.localeCompare(a.p.date))
+    .slice(0, 3)
+    .map((x) => x.p);
+}
+
+function articlePage(post, newer, older, pool = []) {
+  const rel = related(post, pool);
+  const relatedHtml = rel.length
+    ? `
+        <aside class="post-related" aria-labelledby="relatedTitle">
+          <h2 id="relatedTitle">Related</h2>
+          <ul>${rel.map((p) => `\n            <li><a href="/blog/${p.slug}">${escapeHtml(p.title)}</a></li>`).join("")}
+          </ul>
+        </aside>`
+    : "";
   const url = `${SITE}/blog/${post.slug}`;
   const ld = {
     "@context": "https://schema.org",
@@ -209,12 +233,27 @@ function articlePage(post, newer, older) {
     publisher: { "@type": "Organization", name: "FOKT Consulting LLC", logo: { "@type": "ImageObject", url: `${SITE}/apple-touch-icon.png` } },
   };
   const minutes = Math.max(1, Math.round(post.words / 230));
+  const crumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ],
+  };
   return `${head({
-    title: `${post.title} | FOKT Consulting`,
+    // Google shows about 60 characters of a title; the brand only goes on when it still fits.
+    title: post.title.length <= 44 ? `${post.title} | FOKT Consulting` : post.title,
     description: post.description,
     url,
     type: "article",
-    extra: `\n  <script type="application/ld+json">${JSON.stringify(ld)}</script>`,
+    extra:
+      `\n  <meta property="article:published_time" content="${post.date}T07:00:00+01:00">` +
+      `\n  <meta property="article:author" content="Kelvin Fawehinmi">` +
+      `\n  <meta name="author" content="Kelvin Fawehinmi">` +
+      `\n  <script type="application/ld+json">${JSON.stringify(ld)}</script>` +
+      `\n  <script type="application/ld+json">${JSON.stringify(crumbs)}</script>`,
   })}
   <main id="main">
     <header class="legal-top">
@@ -229,6 +268,7 @@ function articlePage(post, newer, older) {
     <div class="wrap">
       <article class="post-body">
 ${post.body}
+${relatedHtml}
 ${CLOSING}
         <nav class="post-nav" aria-label="More posts">
           ${newer ? `<a href="/blog/${newer.slug}"><span>Newer</span>${escapeHtml(newer.title)}</a>` : "<span></span>"}
@@ -255,7 +295,16 @@ function indexPage(posts) {
           </li>`,
     )
     .join("");
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "FOKT Consulting blog",
+    url: `${SITE}/blog`,
+    publisher: { "@type": "Organization", name: "FOKT Consulting LLC" },
+    blogPost: posts.slice(0, 20).map((p) => ({ "@type": "BlogPosting", headline: p.title, url: `${SITE}/blog/${p.slug}`, datePublished: p.date })),
+  };
   return `${head({
+    extra: `\n  <script type="application/ld+json">${JSON.stringify(ld)}</script>`,
     title: "Single Audit and Uniform Guidance blog | FOKT Consulting",
     description: "Plain-English answers about Single Audit findings, corrective action plans and the Uniform Guidance, for nonprofit finance and compliance teams.",
     url: `${SITE}/blog`,
@@ -308,6 +357,41 @@ function feed(posts) {
 `;
 }
 
+/** The three newest posts on the homepage, so every new post is one link from the front page. */
+function updateHomepage(posts) {
+  const path = join(ROOT, "index.html");
+  const html = readFileSync(path, "utf8");
+  const items = posts
+    .slice(0, 3)
+    .map(
+      (p) => `
+            <li class="post-list__item">
+              <p class="post-list__date"><time datetime="${p.date}">${longDate(p.date)}</time></p>
+              <h3><a href="/blog/${p.slug}">${escapeHtml(p.title)}</a></h3>
+              <p>${escapeHtml(p.description)}</p>
+            </li>`,
+    )
+    .join("");
+  const block = posts.length
+    ? `<!-- blog-latest:start -->
+    <section class="section" id="blog" aria-labelledby="blogTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="blogTitle">From the blog</h2>
+          <p>Plain-English answers about Single Audit findings and the Uniform Guidance.</p>
+        </div>
+        <ul class="post-list post-list--home">${items}
+        </ul>
+        <p><a href="/blog" class="btn btn--quiet">All posts</a></p>
+      </div>
+    </section>
+    <!-- blog-latest:end -->`
+    : "<!-- blog-latest:start -->\n    <!-- blog-latest:end -->";
+  const next = html.replace(/<!-- blog-latest:start -->[\s\S]*?<!-- blog-latest:end -->/, block);
+  if (next === html && !html.includes("<!-- blog-latest:start -->")) throw new Error("index.html is missing the blog-latest markers");
+  writeFileSync(path, next);
+}
+
 /** Replace the generated blog block in sitemap.xml, leaving the hand-written entries alone. */
 function updateSitemap(posts) {
   const path = join(ROOT, "sitemap.xml");
@@ -327,12 +411,15 @@ const due = all
 
 if (existsSync(OUT)) rmSync(OUT, { recursive: true });
 mkdirSync(OUT, { recursive: true });
-due.forEach((p, i) => writeFileSync(join(OUT, `${p.slug}.html`), articlePage(p, due[i - 1], due[i + 1])));
+due.forEach((p, i) => writeFileSync(join(OUT, `${p.slug}.html`), articlePage(p, due[i - 1], due[i + 1], due)));
 writeFileSync(join(OUT, "index.html"), indexPage(due));
 writeFileSync(join(OUT, "feed.xml"), feed(due));
 // For the PostPilot tracker: every published post with its date (CORS-enabled in _headers).
 writeFileSync(join(OUT, "posts.json"), JSON.stringify(due.map((p) => ({ slug: p.slug, title: p.title, date: p.date })), null, 1));
-if (!previewAll) updateSitemap(due);
+if (!previewAll) {
+  updateSitemap(due);
+  updateHomepage(due);
+}
 
 const upcoming = all.filter((p) => !due.includes(p)).sort((a, b) => a.date.localeCompare(b.date));
 console.log(`Blog built for ${today}: ${due.length} published, ${upcoming.length} waiting.`);
