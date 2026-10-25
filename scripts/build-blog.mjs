@@ -77,6 +77,7 @@ const NAV = `
         <li><a href="/#findings">Findings</a></li>
         <li><a href="/#how">How it works</a></li>
         <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/international">International NGOs</a></li>
         <li><a href="/#about">About</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/#faq">FAQ</a></li>
@@ -108,6 +109,7 @@ const FOOTER = `
           <ul>
             <li><a href="/#how">Findings Review</a></li>
             <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/international">International NGOs</a></li>
             <li><a href="/#retest">Free retest note</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/#faq">FAQ</a></li>
