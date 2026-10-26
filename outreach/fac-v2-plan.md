@@ -83,3 +83,21 @@ SPF and DMARC on foktconsulting.com are set for Zoho. DKIM could not be confirme
 - Send from Zoho (kelvin@foktconsulting.com) only. If the other account sends through any other service (Gmail, Resend, an outreach tool), that service must be added to SPF and have its own DKIM, or emails land in spam.
 - Send 20 to 30 a day at most, spread over the day. Plain text, no images, one link at most in email 1 (none is better).
 - Send yourself one test first and check it lands in the Gmail inbox, not Promotions or Spam.
+
+## Correction after reading the Sent folder (26 Oct 2026)
+
+I wrote the table above before seeing the real emails, and part of it is wrong. Version 1 was not a generic "book a call" pitch. It quoted the auditor's own words, gave the audit acceptance date and the funder decision deadline, and already offered the free retest note ("Want me to send it?") with the call link only as an alternative. The two asks were already close to "reply yes".
+
+What the mailbox actually shows (Zoho, kelvin@foktconsulting.com):
+
+- About 50 first-touch emails sent 15 to 23 October, plus follow-ups. 94 items in Sent.
+- 2 replies, both hard opt-outs ("not interested, please remove me" and "No. Go away"). Those two addresses must never be emailed again. One out-of-office reply. One bounce (hnkop.org).
+- 0 positive replies. At typical cold B2B response rates of 1 to 3 percent positive, about 50 emails is too few to conclude the offer is broken. Expect the first positive reply somewhere between 100 and 300 well-targeted sends.
+
+What probably still helps, in order of confidence:
+
+1. **Shorter first email.** Version 1 is about 190 words with six bullets. Bullets headed "What I do" and "Why me" read as a template. Target 60 to 80 words, no bullets, one quote from their audit, one ask.
+2. **Keep the opening exactly as it is** (the quote, the dates). That is the strongest part.
+3. **Add the $650 Finding Check only in email 2 or 3**, never in the first email.
+4. **Honor opt-outs permanently**: keep a suppression list (opt-outs and bounces) and check every batch against it before sending.
+5. **Verify DKIM in Zoho** (SPF and DMARC are in place). The DMARC reports arrive as zipped attachments that could not be read from the web page. Unzip one to see pass or fail per sending source.
