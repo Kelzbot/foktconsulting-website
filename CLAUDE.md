@@ -28,6 +28,25 @@ Two posts a week (Tuesday and Thursday) from 22 Oct 2026 to 21 Jan 2027, drawn f
 Idea Bank question bank (Single Audit findings, Uniform Guidance). The `ideas` field in each header is the
 PostPilot idea id.
 
+## SEO, add-on offers and NofoDesk (updated 1 Nov 2026)
+
+All in `outreach/` (private, in `.assetsignore`):
+- `dashboard.html`: Semrush US comparison vs smartgrantsolutions.com, thompsongrants.com, hungerford.com, jmco.com
+  (top pages, keyword gaps, clean backlink gaps, upsell map). Semrush has no organic data for FOKT yet (AS 2,
+  all 204 referring domains are spam).
+- `addon-offers.md`: every add-on written out (who, deliverables, rules, suggested price, selling order).
+  New offers are **not on the website**. Suggested prices await Kelvin's decision.
+- `monday-readiness-map.md`: pre-send checklist, what to study, guardrails, and the week of 2 Nov plan.
+  The batch goes only to findings with a retest note (B, C, I, L, M). The note for E is due Tue 3 Nov.
+- `nofodesk-gap-plan.md`: what NofoDesk actually does (read from the `Kelzbot/nofodesk` code), the US
+  post-award gaps, and the build order. NofoDesk work belongs in the nofodesk repo, not here.
+- index.html now describes NofoDesk as a grant management workspace (the old "every field in about 30
+  seconds" line undersold it).
+- Waiting on Kelvin: DKIM check in Zoho, prices for new offers, whether to offer fractional work, NofoDesk
+  build session (start with the USAID MTDC $25,000 → $50,000 rule fix).
+- Next for the site: CAP template page (`/corrective-action-plan-template`), then free profiles (Crunchbase,
+  Pitchbook, Curlie, Substack), then indirect-cost and time-and-effort posts (both KD under 10).
+
 ## Writing rules for posts
 
 - First person, Kelvin. Plain US English for nonprofit finance and compliance staff.

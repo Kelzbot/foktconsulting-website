@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>FOKT SEO Gap Dashboard</title>
+<style>
+@font-face{font-family:'Source Serif 4';src:url('../assets/fonts/source-serif-4-latin.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Public Sans';src:url('../assets/fonts/public-sans-latin.woff2') format('woff2');font-weight:400 700;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url('../assets/fonts/ibm-plex-mono-latin.woff2') format('woff2');font-weight:500;font-display:swap}
+/* Same tokens as styles.css */
+:root{
+  --ink:#14284B;--teal:#0E7C7B;--teal-deep:#0B6665;--wash:#E8F4F3;--paper:#FFFFFF;
+  --rule:#D3DEDD;--text:#1B2433;--muted:#4A5565;--stamp:#B42318;--gold:#8A5A00;--gold-wash:#FBF3E2;
+  --serif:'Source Serif 4',Georgia,serif;--sans:'Public Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#F6F8F8;color:var(--text);font:15px/1.55 var(--sans)}
+header{background:var(--ink);color:#fff;padding:28px 16px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header .wrap{padding:0}
+h1,h2{font-family:var(--serif);font-weight:600;line-height:1.2}
+h1{margin:0 0 6px;font-size:clamp(22px,4vw,32px)}
+header p{margin:0;color:#C9D3E1;max-width:820px}
+h2{font-size:22px;margin:40px 0 4px;color:var(--ink)}
+h2 + p{margin:0 0 16px;color:var(--muted);max-width:860px}
+h3{font-size:16px;margin:0 0 8px;color:var(--ink)}
+.note{background:var(--gold-wash);border-left:4px solid var(--gold);padding:12px 16px;margin:24px 0 0;border-radius:4px}
+.note.red{background:#FDECEA;border-color:var(--stamp)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:24px}
+.kpi{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:14px 16px}
+.kpi.you{border:2px solid var(--teal)}
+.kpi .name{font-weight:700;color:var(--ink);font-size:14px}
+.kpi .tag{font-size:12px;color:var(--muted)}
+.kpi dl{display:grid;grid-template-columns:1fr auto;gap:2px 8px;margin:10px 0 0;font-size:13px}
+.kpi dd{margin:0;font-family:var(--mono);text-align:right}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:16px;margin-bottom:14px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);background:var(--wash)}
+td.n{font-family:var(--mono);text-align:right;white-space:nowrap}
+td a{color:var(--teal-deep);word-break:break-all}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.p-svc{background:#E4ECF7;color:var(--ink)}
+.p-blog{background:var(--wash);color:var(--teal-deep)}
+.p-tool{background:var(--gold-wash);color:var(--gold)}
+.p-have{background:var(--wash);color:var(--teal-deep)}
+.p-none{background:#FDECEA;color:var(--stamp)}
+.p-off{background:#EEF0F2;color:var(--muted)}
+.offer{border-left:4px solid var(--teal)}
+.offer.new{border-left-color:var(--gold)}
+.offer .ladder{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--wash);padding:6px 10px;border-radius:4px;margin:8px 0}
+.offer p{margin:6px 0}
+.muted{color:var(--muted);font-size:13px}
+footer{margin:48px 0 32px;color:var(--muted);font-size:12.5px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>foktconsulting.com vs 4 US competitors</h1>
+    <p>Semrush US database, pulled 31 Oct 2026. Audience: US nonprofits and small NGOs with federal awards. Goal: find the pages, keywords and links that bring them clients, and the add-on offers FOKT can sell on top of the Findings Review.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div class="note red"><strong>Read first.</strong> Semrush has <strong>no organic data for foktconsulting.com</strong>: it ranks in Google's top 100 for nothing Semrush tracks yet. So every competitor keyword below is a gap. All 204 sites linking to FOKT are spam (URL shorteners, <code>.top</code> blogs, link checkers). Google mostly ignores links like these, but they do nothing for you. FOKT needs its first real links.</div>
+
+<div class="kpis">
+  <div class="kpi you"><div class="name">foktconsulting.com</div><div class="tag">You</div>
+    <dl><dt>Authority Score</dt><dd>2</dd><dt>Referring domains</dt><dd>204</dd><dt>Clean referring domains</dt><dd>0</dd><dt>Organic keywords</dt><dd>none</dd><dt>Organic traffic / mo</dt><dd>none</dd></dl></div>
+  <div class="kpi"><div class="name">smartgrantsolutions.com</div><div class="tag">Grant compliance consultancy, closest to FOKT</div>
+    <dl><dt>Authority Score</dt><dd>21</dd><dt>Referring domains</dt><dd>1,552</dd><dt>Organic keywords</dt><dd>258</dd><dt>Organic traffic / mo</dt><dd>429</dd><dt>Traffic value / mo</dt><dd>$1,898</dd></dl></div>
+  <div class="kpi"><div class="name">thompsongrants.com</div><div class="tag">Grants publisher, training and templates</div>
+    <dl><dt>Authority Score</dt><dd>29</dd><dt>Referring domains</dt><dd>2,305</dd><dt>Organic keywords</dt><dd>1,890</dd><dt>Organic traffic / mo</dt><dd>1,768</dd><dt>Traffic value / mo</dt><dd>$5,098</dd></dl></div>
+  <div class="kpi"><div class="name">hungerford.com</div><div class="tag">Michigan CPA firm with a nonprofit and Single Audit practice</div>
+    <dl><dt>Authority Score</dt><dd>24</dd><dt>Referring domains</dt><dd>2,032</dd><dt>Organic keywords</dt><dd>457</dd><dt>Organic traffic / mo</dt><dd>1,205</dd><dt>Traffic value / mo</dt><dd>$7,042</dd></dl></div>
+  <div class="kpi"><div class="name">jmco.com</div><div class="tag">Florida CPA firm, large nonprofit article library</div>
+    <dl><dt>Authority Score</dt><dd>34</dd><dt>Referring domains</dt><dd>6,160</dd><dt>Organic keywords</dt><dd>10,146</dd><dt>Organic traffic / mo</dt><dd>7,053</dd><dt>Traffic value / mo</dt><dd>$41,961</dd></dl></div>
+</div>
+<p class="muted">How they were picked: Semrush has no competitor list for FOKT, so these four come from the US Google results for "single audit" and "uniform guidance". All four sell to nonprofits with federal awards. Big national firms (criadv.com, about 25k visits a month) were left out because they are not a realistic benchmark yet.</p>
+
+<!-- 1. TOP PAGES -->
+<h2>1. Pages that bring them traffic</h2>
+<p>From the Top Pages report. Service pages get 30+ visits a month and blog pages 50+. "Visits" are Semrush's monthly organic traffic estimates.</p>
+<div class="grid2">
+  <div class="card"><h3>smartgrantsolutions.com</h3><div class="scroll"><table>
+    <tr><th>Page</th><th>Type</th><th>Visits</th><th>KWs</th></tr>
+    <tr><td><a href="https://www.smartgrantsolutions.com/2-cfr-part-200/">/2-cfr-part-200/</a></td><td><span class="pill p-blog">Guide</span></td><td class="n">208</td><td class="n">86</td></tr>
+    <tr><td><a href="https://www.smartgrantsolutions.com/">Homepage</a></td><td><span class="pill p-svc">Service</span></td><td class="n">182</td><td class="n">20</td></tr>
+  </table></div><p class="muted">One plain-English 2 CFR 200 guide brings in 48% of their traffic.</p></div>
+
+  <div class="card"><h3>thompsongrants.com</h3><div class="scroll"><table>
+    <tr><th>Page</th><th>Type</th><th>Visits</th><th>KWs</th></tr>
+    <tr><td><a href="https://www.thompsongrants.com/blog/sample-grant-proposal-template/">/blog/sample-grant-proposal-template/</a></td><td><span class="pill p-blog">Blog</span></td><td class="n">701</td><td class="n">333</td></tr>
+    <tr><td><a href="https://www.thompsongrants.com/tools-and-resources/corrective-action-plan-template">/tools-and-resources/corrective-action-plan-template</a></td><td><span class="pill p-tool">Template</span></td><td class="n">186</td><td class="n">21</td></tr>
+    <tr><td><a href="https://www.thompsongrants.com/blog/grant-budget-examples/">/blog/grant-budget-examples/</a></td><td><span class="pill p-blog">Blog</span></td><td class="n">162</td><td class="n">61</td></tr>
+    <tr><td><a href="https://www.thompsongrants.com/blog/grant-compliance/">/blog/grant-compliance/</a></td><td><span class="pill p-blog">Blog</span></td><td class="n">128</td><td class="n">35</td></tr>
+    <tr><td><a href="https://www.thompsongrants.com/blog/grant-management/">/blog/grant-management/</a></td><td><span class="pill p-blog">Blog</span></td><td class="n">81</td><td class="n">79</td></tr>
+    <tr><td><a href="https://www.thompsongrants.com/blog/what-is-2cfr200-an-overview-of-uniform-guidance/">/blog/what-is-2cfr200-…</a></td><td><span class="pill p-blog">Blog</span></td><td class="n">69</td><td class="n">36</td></tr>
+    <tr><td><a href="https://www.thompsongrants.com/">Homepage</a></td><td><span class="pill p-svc">Service</span></td><td class="n">67</td><td class="n">13</td></tr>
+    <tr><td><a href="https://www.thompsongrants.com/blog/single-audit-requirements/">/blog/single-audit-requirements/</a></td><td><span class="pill p-blog">Blog</span></td><td class="n">55</td><td class="n">45</td></tr>
+  </table></div><p class="muted">Their CAP template page is the clearest gap. It targets the exact buyer FOKT wants.</p></div>
+
+  <div class="card"><h3>hungerford.com</h3><div class="scroll"><table>
+    <tr><th>Page</th><th>Type</th><th>Visits</th><th>KWs</th></tr>
+    <tr><td><a href="https://www.hungerford.com/">Homepage</a></td><td><span class="pill p-svc">Service</span></td><td class="n">800</td><td class="n">66</td></tr>
+    <tr><td><a href="https://www.hungerford.com/blog/when-is-a-401k-plan-audit-required/">/blog/when-is-a-401k-plan-audit-required/</a></td><td><span class="pill p-off">Off-topic</span></td><td class="n">141</td><td class="n">60</td></tr>
+  </table></div><p class="muted">Mostly brand and Michigan local searches. Their nonprofit page ranks #6 for "accounting services for non profit" (210/mo, $27 CPC) but brings fewer than 30 visits.</p></div>
+
+  <div class="card"><h3>jmco.com <span class="muted">(nonprofit-relevant pages only)</span></h3><div class="scroll"><table>
+    <tr><th>Page</th><th>Type</th><th>Visits</th><th>KWs</th></tr>
+    <tr><td><a href="https://www.jmco.com/">Homepage</a></td><td><span class="pill p-svc">Service</span></td><td class="n">1,121</td><td class="n">74</td></tr>
+    <tr><td><a href="https://www.jmco.com/hr-solutions/consulting/">/hr-solutions/consulting/</a></td><td><span class="pill p-svc">Service</span></td><td class="n">384</td><td class="n">299</td></tr>
+    <tr><td><a href="https://www.jmco.com/articles/nonprofit/one-big-beautiful-bill-pros-and-cons/">/articles/nonprofit/one-big-beautiful-bill-…</a></td><td><span class="pill p-blog">Blog</span></td><td class="n">74</td><td class="n">3</td></tr>
+  </table></div><p class="muted">About 35 other pages above the bar cover tax, real estate, healthcare and local offices, outside FOKT's lane. Their nonprofit articles each fall just under 50 (501c3 compliance 47, budgeting 48).</p></div>
+</div>
+
+<!-- 2. KEYWORD GAP -->
+<h2>2. Keywords they rank top 20 for that FOKT doesn't</h2>
+<p>FOKT ranks for none of these. Filtered to topics a nonprofit compliance buyer searches for, with off-lane terms removed (401k audits, grant writing, Michigan CPA searches). "Your page" shows whether the blog already covers the topic. A covered topic that doesn't rank yet needs links, not a new post. KD is Semrush's 0–100 difficulty score. Under 20 is realistic for FOKT now.</p>
+<div class="card scroll"><table>
+  <tr><th>Keyword</th><th>Vol/mo</th><th>KD</th><th>CPC</th><th>Who ranks</th><th>Your page</th><th>Move</th></tr>
+  <tr><td>corrective action plan template</td><td class="n">1,900</td><td class="n">14</td><td class="n">$2.30</td><td>Thompson #2</td><td><span class="pill p-have">Post, no template</span></td><td>Add a downloadable CAP template page</td></tr>
+  <tr><td>corrective action plan</td><td class="n">1,600</td><td class="n">29</td><td class="n">$3.49</td><td>Thompson #6</td><td><span class="pill p-have">Post</span></td><td>Same template page</td></tr>
+  <tr><td>compliance supplement 2025</td><td class="n">1,000</td><td class="n">9</td><td class="n">–</td><td>Thompson #10</td><td><span class="pill p-have">Evergreen post</span></td><td>Year-named page when the 2026 edition is out</td></tr>
+  <tr><td>omb compliance supplement 2025</td><td class="n">390</td><td class="n">14</td><td class="n">–</td><td>Thompson #11</td><td><span class="pill p-have">Evergreen post</span></td><td>Same page</td></tr>
+  <tr><td>financial statement audit</td><td class="n">1,000</td><td class="n">19</td><td class="n">$15.01</td><td>JMCO #10</td><td><span class="pill p-none">None</span></td><td>Post: financial statement audit vs Single Audit</td></tr>
+  <tr><td>single audit threshold 2025</td><td class="n">590</td><td class="n">14</td><td class="n">$2.43</td><td>Thompson #7</td><td><span class="pill p-have">Post</span></td><td>Links + current-year wording</td></tr>
+  <tr><td>single audit</td><td class="n">590</td><td class="n">37</td><td class="n">$5.03</td><td>Thompson #8, Hungerford #15, JMCO #16</td><td><span class="pill p-have">Spread over posts</span></td><td>One pillar page linking all Single Audit posts</td></tr>
+  <tr><td>what is a single audit</td><td class="n">390</td><td class="n">25</td><td class="n">$0.76</td><td>Thompson #6</td><td><span class="pill p-have">Partial</span></td><td>Pillar page</td></tr>
+  <tr><td>nonprofit audit requirements</td><td class="n">260</td><td class="n">15</td><td class="n">$3.66</td><td>JMCO #15</td><td><span class="pill p-none">None</span></td><td>Post</td></tr>
+  <tr><td>nonprofit audit report</td><td class="n">210</td><td class="n">9</td><td class="n">$9.71</td><td>JMCO #1</td><td><span class="pill p-none">None</span></td><td>Post: how to read your audit report</td></tr>
+  <tr><td>2 cfr 200</td><td class="n">3,600</td><td class="n">36</td><td class="n">$3.98</td><td>SmartGrant #7</td><td><span class="pill p-none">None</span></td><td>2 CFR 200 hub (long game)</td></tr>
+  <tr><td>2 cfr part 200</td><td class="n">1,600</td><td class="n">34</td><td class="n">$4.94</td><td>SmartGrant #6, Thompson #15</td><td><span class="pill p-none">None</span></td><td>Hub</td></tr>
+  <tr><td>2cfr200</td><td class="n">1,300</td><td class="n">26</td><td class="n">$4.80</td><td>Thompson #3, SmartGrant #4</td><td><span class="pill p-none">None</span></td><td>Hub</td></tr>
+  <tr><td>uniform guidance</td><td class="n">1,000</td><td class="n">45</td><td class="n">$3.02</td><td>SmartGrant #7</td><td><span class="pill p-none">None</span></td><td>Hub</td></tr>
+  <tr><td>2 cfr 200 procurement</td><td class="n">140</td><td class="n">19</td><td class="n">–</td><td>SmartGrant #7</td><td><span class="pill p-none">None</span></td><td>Section page, start here</td></tr>
+  <tr><td>2 cfr 200.475</td><td class="n">110</td><td class="n">17</td><td class="n">–</td><td>SmartGrant #11</td><td><span class="pill p-none">None</span></td><td>Section page (insurance and indemnification)</td></tr>
+  <tr><td>time and effort</td><td class="n">260</td><td class="n">8</td><td class="n">–</td><td>SmartGrant #10</td><td><span class="pill p-none">None</span></td><td>Post, 2 CFR 200.430(i)</td></tr>
+  <tr><td>what are indirect costs in a grant</td><td class="n">210</td><td class="n">5</td><td class="n">$8.28</td><td>JMCO #7</td><td><span class="pill p-none">None</span></td><td>Post, 2 CFR 200.414</td></tr>
+  <tr><td>what is cost allocation</td><td class="n">210</td><td class="n">32</td><td class="n">–</td><td>SmartGrant #16</td><td><span class="pill p-none">None</span></td><td>Post</td></tr>
+  <tr><td>cost allocation plan</td><td class="n">140</td><td class="n">12</td><td class="n">$9.86</td><td>SmartGrant #4</td><td><span class="pill p-none">None</span></td><td>Post</td></tr>
+  <tr><td>grant management</td><td class="n">1,300</td><td class="n">24</td><td class="n">$15.90</td><td>Thompson #10</td><td><span class="pill p-none">None</span></td><td>Post-award management guide</td></tr>
+  <tr><td>grants management</td><td class="n">880</td><td class="n">28</td><td class="n">$9.38</td><td>Thompson #15</td><td><span class="pill p-none">None</span></td><td>Same guide</td></tr>
+  <tr><td>nonprofit budget</td><td class="n">1,600</td><td class="n">16</td><td class="n">$10.14</td><td>JMCO #4</td><td><span class="pill p-off">Adjacent</span></td><td>Only if you sell the fractional offer below</td></tr>
+  <tr><td>bookkeeping for non profit</td><td class="n">210</td><td class="n">12</td><td class="n">$16.40</td><td>JMCO #1</td><td><span class="pill p-off">Adjacent</span></td><td>Same</td></tr>
+  <tr><td>501c3 accounting</td><td class="n">170</td><td class="n">4</td><td class="n">$12.47</td><td>JMCO #3</td><td><span class="pill p-off">Adjacent</span></td><td>Same</td></tr>
+  <tr><td>accounting services for non profit</td><td class="n">210</td><td class="n">22</td><td class="n">$27.00</td><td>Hungerford #6</td><td><span class="pill p-off">Adjacent</span></td><td>Same</td></tr>
+</table></div>
+
+<!-- 3. BACKLINK GAP -->
+<h2>3. Backlinks they have that FOKT doesn't</h2>
+<p>Top referring domains by Authority Score for each competitor. Spam was removed: people-search sites, URL shorteners, lead-data scrapers, AI wiki clones, paid-PR sites and SEO link farms. Nothing below links to FOKT today.</p>
+<div class="card scroll"><table>
+  <tr><th>Linking site</th><th>AS</th><th>Links to</th><th>How FOKT gets one</th></tr>
+  <tr><td>substack.com</td><td class="n">88</td><td>Thompson (3), JMCO (12)</td><td>Start a Substack for the blog posts and link back to each original. PostPilot already drafts Substack posts.</td></tr>
+  <tr><td>medium.com</td><td class="n">97</td><td>JMCO</td><td>Republish selected posts with a canonical link to foktconsulting.com</td></tr>
+  <tr><td>crunchbase.com</td><td class="n">74</td><td>Hungerford, JMCO</td><td>Free company profile</td></tr>
+  <tr><td>pitchbook.com</td><td class="n">63</td><td>SmartGrant</td><td>Free company profile claim</td></tr>
+  <tr><td>University research offices: utexas.edu, rutgers.edu, colorado.edu, ucsb.edu, gmu.edu, boisestate.edu, valdosta.edu, ulm.edu</td><td class="n">42–76</td><td>Thompson</td><td>Their "sponsored programs resources" pages link to plain-English Uniform Guidance explainers. Send them the 2 CFR 200 hub or CAP template once live.</td></tr>
+  <tr><td>blackbaud.com</td><td class="n">54</td><td>Thompson</td><td>Guest article or community answer on audit findings</td></tr>
+  <tr><td>doublethedonation.com</td><td class="n">52</td><td>Thompson</td><td>Gets into their nonprofit resource roundups. Pitch the CAP template.</td></tr>
+  <tr><td>memberclicks.net</td><td class="n">46</td><td>Thompson (47 links)</td><td>State nonprofit associations host here. Offer a webinar or member resource to your state association.</td></tr>
+  <tr><td>rwjf.org</td><td class="n">44</td><td>SmartGrant</td><td>Hard. Foundation grantee-resource pages. Low priority.</td></tr>
+  <tr><td>501c3.org</td><td class="n">44</td><td>Thompson</td><td>Guest post or resource listing</td></tr>
+  <tr><td>venable.com</td><td class="n">43</td><td>Thompson</td><td>Law-firm client alerts cite explainers. Build a relationship with nonprofit lawyers.</td></tr>
+  <tr><td>News: edweek.org, elpasomatters.org, ctnewsjunkie.com</td><td class="n">43–51</td><td>Thompson</td><td>Get quoted when reporters cover Single Audit findings (FAC data, late filers). Connectively / Qwoted pitches.</td></tr>
+  <tr><td>virtuous.org</td><td class="n">40</td><td>SmartGrant</td><td>Guest article for a nonprofit CRM blog</td></tr>
+  <tr><td>networkforgood.com</td><td class="n">40</td><td>Hungerford</td><td>Partner or expert directory listing</td></tr>
+  <tr><td>curlie.org</td><td class="n">34</td><td>Hungerford</td><td>Free directory submission</td></tr>
+  <tr><td>Community foundations: grct.org, muskegon.org</td><td class="n">32–33</td><td>Hungerford</td><td>Community foundations list vetted vendors for grantees. Ask to be added.</td></tr>
+  <tr><td>sureimpact.com</td><td class="n">26</td><td>SmartGrant</td><td>Guest post on an impact-measurement software blog</td></tr>
+  <tr><td>collaborativeconference.org</td><td class="n">9</td><td>SmartGrant</td><td>Low authority but the right audience. A speaker page links back.</td></tr>
+</table></div>
+
+<!-- 4. MONEY -->
+<h2>4. Where the money is: add-ons to the Findings Review</h2>
+<p>Each offer below is tied to search demand from this data and to FOKT's existing ladder: Finding Check $650, Findings Review $2,000, UG policies set $2,500, CAP Implementation Support $4,500, Audit Readiness Retainer $1,000/mo. Gold border = new offer. No prices are set for the new ones. That's your call.</p>
+
+<div class="grid2">
+  <div class="card offer"><h3>1. Free CAP template as the front door</h3>
+    <div class="ladder">CAP template (free, email) → Finding Check $650 → Findings Review $2,000 → CAP Implementation $4,500</div>
+    <p><strong>Demand:</strong> "corrective action plan template" 1,900/mo (KD 14), "corrective action plan" 1,600/mo. Thompson's template page alone gets about 186 visits a month.</p>
+    <p><strong>Why first:</strong> No new service to build, and the buyer who downloads it already has a finding. You already have the matching post.</p></div>
+
+  <div class="card offer"><h3>2. Compliance Supplement pre-audit check</h3>
+    <div class="ladder">Year-named Supplement page → pre-audit check → Audit Readiness Retainer $1,000/mo</div>
+    <p><strong>Demand:</strong> "compliance supplement 2025" 1,000/mo at KD 9, the easiest high-volume term in the set. Add "omb compliance supplement 2025" at 390/mo.</p>
+    <p><strong>Timing:</strong> Publish when OMB issues the 2026 Supplement. Its status is already on the re-check list.</p></div>
+
+  <div class="card offer new"><h3>3. Indirect cost and cost allocation setup</h3>
+    <div class="ladder">Indirect-cost post → setup engagement → UG policies set $2,500</div>
+    <p><strong>Demand:</strong> "indirect cost rate" 210, "what are indirect costs in a grant" 210 (KD 5), "de minimis rate" 170, "cost allocation plan" 140 ($9.86 CPC). Total about 730/mo, all low difficulty.</p>
+    <p><strong>Scope:</strong> Choose de minimis or a negotiated rate (2 CFR 200.414), write the allocation method, and test that charges are allocable (200.405). It prevents allowable-cost findings.</p></div>
+
+  <div class="card offer new"><h3>4. Time-and-effort fix</h3>
+    <div class="ladder">Time-and-effort post → payroll documentation setup → retainer</div>
+    <p><strong>Demand:</strong> "time and effort" 260/mo at KD 8. "time and effort reporting" 110/mo at $5.93 CPC.</p>
+    <p><strong>Scope:</strong> Build personnel-cost records that meet 2 CFR 200.430(i). Payroll is usually the largest cost on an award, and auditors test it under Allowable Costs.</p></div>
+
+  <div class="card offer new"><h3>5. Staff and board compliance training</h3>
+    <div class="ladder">Standalone workshop → CAP Implementation (already includes training)</div>
+    <p><strong>Demand:</strong> Small in search: "grant compliance training" 50/mo ($5.95 CPC), "federal grant management training" 50/mo. Thompson built a business on this. Sell it through state associations (memberclicks link above) and outreach, not SEO.</p></div>
+
+  <div class="card offer new"><h3>6. Subrecipient monitoring program</h3>
+    <div class="ladder">Existing subrecipient post → risk assessment + monitoring plan → retainer</div>
+    <p><strong>Demand:</strong> "subrecipient monitoring" only 90/mo, but every buyer is a pass-through entity with subawards, required under 2 CFR 200.332. Low volume, high fit. Push it through FAC outreach to orgs with subrecipient findings.</p></div>
+
+  <div class="card offer new"><h3>7. Fractional grant accountant</h3>
+    <div class="ladder">Monthly close review + grant reporting → replaces or sits beside the retainer</div>
+    <p><strong>Demand:</strong> "grant accounting" 480/mo, "fractional cfo for nonprofits" 140/mo ($22.87 CPC), "bookkeeping for non profit" 210 ($16.40), "nonprofit budget" 1,600. This is how JMCO and Hungerford earn recurring revenue.</p>
+    <p><strong>Catch:</strong> It's ongoing operational work, not findings work. Decide whether you want it before writing content for it.</p></div>
+
+  <div class="card offer new"><h3>8. NofoDesk on a software search</h3>
+    <div class="ladder">Software landing page → NofoDesk trial</div>
+    <p><strong>Demand:</strong> "grant management software for nonprofits" 590/mo at <strong>$44.88 CPC</strong>, the highest commercial value in this data.</p>
+    <p><strong>Fit:</strong> NofoDesk already covers the pre-award side and award setup (NOFO and Notice of Award reading, conditions clock, reporting calendar, budgets with indirect rules, team workspace). US post-award buyers will also ask for budget vs actual, SF-425 and drawdown tracking, and subrecipient monitoring, which it doesn't have yet. See <code>outreach/nofodesk-gap-plan.md</code>.</p></div>
+</div>
+
+<div class="card offer"><h3>The long game: a 2 CFR 200 hub</h3>
+  <p>SmartGrant gets about half its traffic from one 2 CFR 200 guide. The top four variants ("2 cfr 200", "2 cfr part 200", "2cfr200", "uniform guidance") total 7,500 searches a month, but KD is 26–45 and FOKT's Authority Score is 2. Start with single-section pages that are easy to rank ("2 cfr 200 procurement" KD 19, "2 cfr 200.475" KD 17), link them to a hub, and point the hub at the $2,500 UG policies set.</p>
+</div>
+
+<h2>Suggested order</h2>
+<div class="card"><ol style="margin:0;padding-left:20px">
+  <li>Fix the link base first: Crunchbase, Pitchbook, Curlie, Substack. They're free, you can do them this week, and nothing ranks at AS 2.</li>
+  <li>CAP template page plus email capture (offer 1).</li>
+  <li>Indirect cost and time-and-effort posts. Both are KD under 10 and lead into offers 3 and 4.</li>
+  <li>2026 Compliance Supplement page the week OMB releases it (offer 2).</li>
+  <li>Pitch university research offices and your state nonprofit association once the template is live.</li>
+</ol></div>
+
+<footer>Source: Semrush API, US database, 31 Oct 2026 (Top Pages, Organic Positions, Keyword Overview, Backlinks Referring Domains, Backlinks Comparison). Traffic numbers are Semrush estimates, not analytics. Private file: lives in <code>outreach/</code>, which Cloudflare does not publish.</footer>
+</main>
+</body>
+</html>
