@@ -56,7 +56,7 @@ A activities allowed · B allowable costs · C cash management · E eligibility 
 
 - **Demand:** "time and effort" 260/mo at KD 8. "time and effort reporting" 110/mo ($5.93 CPC).
 - **Who:** B findings about payroll, personnel charges, timesheets, or "budget estimates not reconciled".
-- **Deliverables:** A personnel-cost documentation procedure that meets 2 CFR 200.430(i): records reflect the person's total activity, sit inside the internal control system, and are reconciled when budget estimates were used. Also a timesheet or certification template, an after-the-fact reconciliation worksheet, and a 30-minute walkthrough for the payroll team.
+- **Deliverables:** A personnel-cost documentation procedure that meets 2 CFR 200.430(g): records reflect the person's total activity, sit inside the internal control system, and are reconciled when budget estimates were used. Also a timesheet or certification template, an after-the-fact reconciliation worksheet, and a 30-minute walkthrough for the payroll team.
 - **NofoDesk tie-in:** The Level of Effort comparison already flags allocation changes month to month. Certification sign-off is on the build list.
 - **Suggested price:** $1,500.
 

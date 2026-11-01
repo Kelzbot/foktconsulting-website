@@ -40,7 +40,7 @@ Re-read your own blog posts on the five C's, material weakness vs significant de
 |---|---|---|
 | Finding Check / Review | Their audit report on the FAC, plus Part 3 for that letter | "Why did our fix last year not work?" (Answer from the cause and condition in their finding, not from the policy.) |
 | Indirect cost setup | 200.1 (MTDC), 200.403, 200.405, 200.412–200.414, Appendix IV (nonprofit rates) | "Can we use 15% de minimis if we never had a NICRA?" Yes. It's 15% of MTDC, which excludes equipment, rent, participant support, tuition, patient care and each subaward above its first $50,000. |
-| Time-and-effort fix | 200.430(i) | "Our staff fill budget percentages, is that enough?" Only as an interim estimate, reconciled to actual activity after the fact. |
+| Time-and-effort fix | 200.430(g) | "Our staff fill budget percentages, is that enough?" Only as an interim estimate, reconciled to actual activity after the fact. |
 | Subrecipient monitoring | 200.331, 200.332, 200.521 | "Is this partner a subrecipient or a contractor?" Decide from the substance of the relationship, using the 200.331 factors, not from the name on the agreement. |
 | Pre-audit check | Compliance Supplement Part 4 for their programs, 200.518 | "Which programs will be major?" Likely ones and why. Never a promise. |
 | Policies set | 200.318–200.320 (procurement), 200.302–200.303 (financial management, internal control) | "What's the micro-purchase threshold?" $15,000 (from 1 Oct 2025, as on your site), unless their own policy sets it lower. |
@@ -71,7 +71,7 @@ Equipment threshold: $10,000 per unit (200.1, 2024 revision). Useful for F findi
 | Mon 2 Nov | Part 2 table above | Send batch 1 (B, C, I, L, M only) |
 | Tue 3 Nov | Supplement Part 3, requirement E (eligibility) | Retest note for E |
 | Wed 4 Nov | 200.412–200.414 and Appendix IV | Rate decision memo template (offer 3) |
-| Thu 5 Nov | 200.430(i) | Time-and-effort procedure template (offer 4) |
+| Thu 5 Nov | 200.430(g) | Time-and-effort procedure template (offer 4) |
 | Fri 6 Nov | 200.331–200.332 | Subrecipient risk assessment form (offer 6). Send batch 2 |
 
 By Friday you can deliver offers 3, 4 and 6 from templates instead of starting from a blank page.

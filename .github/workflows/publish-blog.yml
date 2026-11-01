@@ -30,12 +30,12 @@ jobs:
         run: node scripts/build-blog.mjs
       - name: Commit if anything changed
         run: |
-          if [ -z "$(git status --porcelain blog sitemap.xml)" ]; then
+          if [ -z "$(git status --porcelain blog sitemap.xml index.html)" ]; then
             echo "Nothing new to publish."
             exit 0
           fi
           git config user.name "fokt-blog-bot"
           git config user.email "fokt-blog-bot@users.noreply.github.com"
-          git add blog sitemap.xml
+          git add blog sitemap.xml index.html
           git commit -m "blog: publish posts due $(TZ=Africa/Lagos date +%F)"
           git push

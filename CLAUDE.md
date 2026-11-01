@@ -15,8 +15,9 @@ pages themselves. Every push to `master` is deployed by Cloudflare Workers Build
   `posts.json`) and the blog block in `sitemap.xml`. `--all` previews every post, `--date=YYYY-MM-DD`
   builds as of that day. Never edit `blog/` by hand: it is regenerated.
 - **Scheduling:** `.github/workflows/publish-blog.yml` runs the build at 06:00 UTC (07:00 Lagos) daily, on
-  manual dispatch, and on pushes that change `blog-src/` or the script, then commits `blog/` and
-  `sitemap.xml` if anything changed. That push is what deploys the new post.
+  manual dispatch, and on pushes that change `blog-src/` or the script, then commits `blog/`,
+  `sitemap.xml` and the homepage's latest-posts block in `index.html` if anything changed. That push is
+  what deploys the new post. (Before 1 Nov 2026 it skipped `index.html`, so the homepage list went stale.)
 - `blog-src/`, `scripts/` and `.github/` are in `.assetsignore`, so future posts are never served early.
 - `blog/posts.json` is CORS-enabled in `_headers`: the PostPilot app reads it for its posts-per-month tracker.
 - The nav and footer in `scripts/build-blog.mjs` copy the ones in `index.html`. Change both together
@@ -42,8 +43,8 @@ All in `outreach/` (private, in `.assetsignore`):
   post-award gaps, and the build order. NofoDesk work belongs in the nofodesk repo, not here.
 - index.html now describes NofoDesk as a grant management workspace (the old "every field in about 30
   seconds" line undersold it).
-- Waiting on Kelvin: DKIM check in Zoho, prices for new offers, whether to offer fractional work, NofoDesk
-  build session (start with the USAID MTDC $25,000 → $50,000 rule fix).
+- Waiting on Kelvin: DKIM check in Zoho, prices for new offers, whether to offer fractional work.
+  The NofoDesk post-award build is done and live (1 Nov 2026, see `NOFODESK_STATE.md` in that repo).
 - Next for the site: CAP template page (`/corrective-action-plan-template`), then free profiles (Crunchbase,
   Pitchbook, Curlie, Substack), then indirect-cost and time-and-effort posts (both KD under 10).
 
@@ -53,6 +54,7 @@ All in `outreach/` (private, in `.assetsignore`):
 - No em dashes, en dashes or semicolons. No tidy groups of three. No moral or summary at the end, no
   closing question. No "here's the thing", "game-changer", "dive in".
 - Never present Kelvin's or FOKT's work as AI-written.
+- Cite the 2024 revision. Time and effort is 2 CFR 200.430(g), not (i) (fixed everywhere on 1 Nov 2026).
 - Facts only from the regulation (cite the 2 CFR 200 section) or from Kelvin's notes. Don't invent
   numbers, clients or results. Leave dollar thresholds out unless certain they are current.
 - Things that change and need re-checking before their date: the proposed Uniform Grants Regulation

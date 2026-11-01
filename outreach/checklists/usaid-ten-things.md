@@ -8,7 +8,7 @@ Draft. For a non-US NGO holding a USAID grant or cooperative agreement. USAID ap
 
 3. **Support for sampled costs.** For a sample of charges: invoice or receipt, proof of payment, approval before the spend, and the basis for allocating the cost to this award if it is shared. Costs must be reasonable, allocable and adequately documented. (2 CFR 200.403, 200.404, 200.405.)
 
-4. **Personnel charges.** Records that show the time actually worked on the award, approved by a supervisor, that reconcile to payroll. Budget estimates are not time records. (2 CFR 200.430(i).)
+4. **Personnel charges.** Records that show the time actually worked on the award, approved by a supervisor, that reconcile to payroll. Budget estimates are not time records. (2 CFR 200.430(g).)
 
 5. **Procurement files.** Written procurement procedures, evidence of competition at the level the threshold requires, a cost or price analysis above the simplified acquisition threshold, and a check that the vendor is not excluded. One file per purchase with the reason the method and the vendor were chosen. (2 CFR 200.317 to 200.327, 2 CFR 180.)
 

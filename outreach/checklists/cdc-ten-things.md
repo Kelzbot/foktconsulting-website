@@ -8,7 +8,7 @@ Draft. For a non-US organization holding a CDC cooperative agreement (including 
 
 3. **Support for sampled costs.** Invoice, proof of payment, approval before the spend, and the allocation basis for shared costs. Every sampled cost has to be allowable, allocable, reasonable and documented. (2 CFR 200.403 to 200.405 as adopted by HHS.)
 
-4. **Personnel and effort.** Records of time actually worked on the award, approved and reconciled to payroll, for every person charged. (2 CFR 200.430(i) as adopted by HHS.)
+4. **Personnel and effort.** Records of time actually worked on the award, approved and reconciled to payroll, for every person charged. (2 CFR 200.430(g) as adopted by HHS.)
 
 5. **Procurement.** Written procedures, competition records, cost or price analysis above the threshold, and an exclusion check on vendors and sub-recipients. (2 CFR 200.317 to 200.327 and 2 CFR 180 as adopted by HHS.)
 
