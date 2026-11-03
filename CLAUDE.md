@@ -49,7 +49,9 @@ All in `outreach/` (private, in `.assetsignore`):
   `assets/samples/`, linked from the CAP blog post and listed in `sitemap.xml`. There's no email gate because the
   site has no form backend. Add one only with a form service Kelvin picks.
 - Retest notes now cover B (PDF sample), C, E, I, L and M. Still missing: N, internal control, F, G, H, J.
-- Local NofoDesk repo: `Documents\nofodesk` (full history). A stray Supabase CLI cache for the NofoDesk project
+- Code repos now live in `C:\Users\ofawehinmi\GitHub` (outside OneDrive, 3 Nov 2026). NofoDesk is at
+  `GitHub\nofodesk` (full history). This repo, TailorDesk, wahala-junction and mer-capture were open in other
+  windows and are still waiting to be moved there. A stray Supabase CLI cache for the NofoDesk project
   sits in this repo's `supabase/`. It's git-ignored and safe for Kelvin to delete.
 - Next for the site: free profiles (Crunchbase, Pitchbook, Curlie, Substack), then indirect-cost and
   time-and-effort posts (both KD under 10).
