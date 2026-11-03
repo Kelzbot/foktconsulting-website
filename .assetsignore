@@ -9,3 +9,4 @@ scripts
 .github
 CLAUDE.md
 outreach
+.gitignore

@@ -38,15 +38,21 @@ All in `outreach/` (private, in `.assetsignore`):
 - `addon-offers.md`: every add-on written out (who, deliverables, rules, suggested price, selling order).
   New offers are **not on the website**. Suggested prices await Kelvin's decision.
 - `monday-readiness-map.md`: pre-send checklist, what to study, guardrails, and the week of 2 Nov plan.
-  The batch goes only to findings with a retest note (B, C, I, L, M). The note for E is due Tue 3 Nov.
+  The batch goes only to findings with a retest note (B, C, I, L, M). The E note is written (3 Nov).
 - `nofodesk-gap-plan.md`: what NofoDesk actually does (read from the `Kelzbot/nofodesk` code), the US
   post-award gaps, and the build order. NofoDesk work belongs in the nofodesk repo, not here.
 - index.html now describes NofoDesk as a grant management workspace (the old "every field in about 30
   seconds" line undersold it).
 - Waiting on Kelvin: DKIM check in Zoho, prices for new offers, whether to offer fractional work.
   The NofoDesk post-award build is done and live (1 Nov 2026, see `NOFODESK_STATE.md` in that repo).
-- Next for the site: CAP template page (`/corrective-action-plan-template`), then free profiles (Crunchbase,
-  Pitchbook, Curlie, Substack), then indirect-cost and time-and-effort posts (both KD under 10).
+- CAP template page is live at `/corrective-action-plan-template` (3 Nov 2026), with Word and Excel downloads in
+  `assets/samples/`, linked from the CAP blog post and listed in `sitemap.xml`. There's no email gate because the
+  site has no form backend. Add one only with a form service Kelvin picks.
+- Retest notes now cover B (PDF sample), C, E, I, L and M. Still missing: N, internal control, F, G, H, J.
+- Local NofoDesk repo: `Documents\nofodesk` (full history). A stray Supabase CLI cache for the NofoDesk project
+  sits in this repo's `supabase/`. It's git-ignored and safe for Kelvin to delete.
+- Next for the site: free profiles (Crunchbase, Pitchbook, Curlie, Substack), then indirect-cost and
+  time-and-effort posts (both KD under 10).
 
 ## Writing rules for posts
 

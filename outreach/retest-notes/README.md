@@ -9,8 +9,9 @@ One-page notes that go out when a prospect replies "yes" to email 1 of `fac-v2-p
 | `subrecipient-monitoring.md` | Subrecipient monitoring | M |
 | `reporting.md` | Reporting | L |
 | `cash-management.md` | Cash management | C |
+| `eligibility.md` | Eligibility | E |
 
-Not written yet: Eligibility (E), Special tests (N), Internal control (Sec. II), equipment, period of performance, matching, program income. The live sample says "1 of 9", so if the other account already wrote some of these, use those and drop the overlap.
+Not written yet: Special tests (N), Internal control (Sec. II), equipment, period of performance, matching, program income. The live sample says "1 of 9", so if the other account already wrote some of these, use those and drop the overlap.
 
 ## Tailoring a note in about 10 minutes
 
