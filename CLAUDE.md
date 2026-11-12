@@ -69,7 +69,7 @@ firms whose nonprofit clients carry repeat findings (they introduce the client, 
   parts inside `@supports (animation-timeline:view())`, so other browsers show the page still. Reveals animate
   `translate` and hovers `transform`: keep them apart or a revealed card stops lifting. Seen working on the home
   and audit-firms pages in Chrome only. Not checked: phone width, Safari, Firefox, blog pages.
-- Firm list: `Desktop\Outreachudit-firms-2024.csv` (118 firms, sorted by clients with repeat findings; the first
+- Firm list: `Desktop\Outreach\audit-firms-2024.csv` (118 firms, sorted by clients with repeat findings; the first
   58 have 3 or more, the rest 2). Public fac.gov data, FY2024, nonprofit auditees, repeat findings on requirements
   A B C E I L M N, 5 to 150 nonprofit audits, national firms excluded. Rebuild with `audit_firms.py OUT.csv [YEAR]`
   beside it (`FAC_API_KEY` or the slow `DEMO_KEY`, which took about 10 minutes).
