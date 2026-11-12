@@ -56,6 +56,22 @@ All in `outreach/` (private, in `.assetsignore`):
 - Next for the site: free profiles (Crunchbase, Pitchbook, Curlie, Substack), then indirect-cost and
   time-and-effort posts (both KD under 10).
 
+## Audit-firm lane (12 Nov 2026)
+
+Where we are: about 259 cold emails to nonprofits got no positive reply, so the next outreach goes to small audit
+firms whose nonprofit clients carry repeat findings (they introduce the client, the client hires FOKT).
+- `audit-firms.html` (served at `/audit-firms`) and its `sitemap.xml` line are on branch `audit-firms-page`,
+  **uncommitted, not on master, not live**. Built from `international.html`'s nav and footer. Not in the nav or footer
+  of any page yet (that means changing all six files together). Not viewed in a browser yet.
+- Firm list: `Desktop\Outreach\audit-firms-2024.csv` (40 firms, public fac.gov data, FY2024, nonprofit auditees,
+  repeat findings on requirements A B C E I L M N, 3+ such clients, 5 to 150 nonprofit audits, national firms
+  excluded). Rebuild with `audit_firms.py OUT.csv [YEAR]` beside it (`FAC_API_KEY` or the slow `DEMO_KEY`).
+- The page says FOKT pays and accepts no referral fees. Keep outreach consistent with that.
+- Waiting on Kelvin: review the page copy, then commit and merge (a push to master publishes it). Plan: 10 firms a
+  week from his own mailbox, review at day 30 (3 real conversations or rework).
+- Found while reviewing the site: `support@foktconsulting.com` is in every footer and in `index.html` JSON-LD, and
+  Kelz Memory says that mailbox is disabled. Fix the mailbox or change the address.
+
 ## Writing rules for posts
 
 - First person, Kelvin. Plain US English for nonprofit finance and compliance staff.
