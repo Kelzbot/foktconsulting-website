@@ -70,6 +70,7 @@ ul,ol{list-style:none}
 .skip-link:focus{top:.75rem;color:#fff}
 .mono{font-family:var(--mono);font-weight:500}
 .nowrap{white-space:nowrap}
+.cite{font-family:var(--mono);font-weight:500;font-size:.86em;color:var(--teal-deep);white-space:nowrap}
 
 /* ── Layout ──────────────────────────────────────────── */
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
@@ -86,8 +87,9 @@ ul,ol{list-style:none}
   border-radius:8px;border:1.5px solid transparent;
   font-family:var(--sans);font-size:1rem;font-weight:600;line-height:1.2;
   text-align:center;text-decoration:none;cursor:pointer;
-  transition:background-color .15s,border-color .15s,color .15s,box-shadow .15s;
+  transition:background-color .15s,border-color .15s,color .15s,box-shadow .15s,transform .15s;
 }
+.btn:active{transform:translateY(1px) scale(.985)}
 .btn--primary{background:var(--ink);border-color:var(--ink);color:#fff}
 .btn--primary:hover{background:var(--ink-deep);border-color:var(--ink-deep);color:#fff;box-shadow:0 6px 18px rgba(20,40,75,.22)}
 .btn--quiet{background:var(--paper);border-color:var(--ink);color:var(--ink)}
@@ -247,6 +249,7 @@ ul,ol{list-style:none}
   font-family:var(--mono);font-weight:500;font-size:.85rem;color:var(--ink);
   background:var(--wash);border-radius:6px;white-space:nowrap;
 }
+.section--wash .req__code{background:var(--paper)}
 .req h3{font-size:1.05rem}
 .req p{margin-top:4px;color:var(--muted);font-size:.98rem}
 .req-note{margin-top:24px;font-size:.92rem;color:var(--muted);max-width:52em}
@@ -541,3 +544,79 @@ ul,ol{list-style:none}
 .post-list--home h3{font-family:var(--serif);font-size:1.25rem;font-weight:600;margin-top:6px;line-height:1.3}
 .post-list--home h3 a{color:var(--ink);text-decoration:none}
 .post-list--home h3 a:hover{text-decoration:underline}
+
+/* ── Motion ──────────────────────────────────────────── */
+/* CSS only, no script. Nothing here runs for visitors who ask for reduced motion, and browsers
+   without scroll-driven animations just show the page still. Reveals move `translate`, hovers
+   move `transform`, so a revealed card can still lift. */
+.step,.fee__notes li,.product,.workpaper__sheet,.req__code,.post-nav a{
+  transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s,border-color .28s,background-color .28s,color .28s;
+}
+.closing{position:relative;overflow:hidden}
+.closing__inner{position:relative}
+
+@media (prefers-reduced-motion:no-preference){
+  @view-transition{navigation:auto}
+  .nav{view-transition-name:site-nav}
+
+  /* Page load: the hero copy and the workpaper rise in, one after the other */
+  .hero__copy > *,.workpaper,.legal-top__inner > *,.notfound .wrap > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero__copy > :nth-child(2),.legal-top__inner > :nth-child(2){animation-delay:.06s}
+  .hero__copy > :nth-child(3),.legal-top__inner > :nth-child(3){animation-delay:.12s}
+  .hero__copy > :nth-child(4){animation-delay:.18s}
+  .hero__copy > :nth-child(5){animation-delay:.24s}
+  .hero__copy > :nth-child(n+6){animation-delay:.3s}
+  .workpaper{animation-delay:.16s}
+
+  /* A slow teal glow behind the closing call to action */
+  .closing::before{
+    content:'';position:absolute;inset:-60% -20%;pointer-events:none;
+    background:radial-gradient(closest-side,rgba(14,124,123,.42),transparent);
+    animation:drift 16s ease-in-out infinite alternate;
+  }
+
+  @media (hover:hover){
+    .step:hover,.fee__notes li:hover,.product:hover,.post-nav a:hover{
+      transform:translateY(-4px);border-color:var(--teal);box-shadow:0 20px 36px -22px rgba(20,40,75,.4);
+    }
+    .workpaper:hover .workpaper__sheet{transform:translateY(-5px) rotate(-.6deg);box-shadow:0 1px 0 rgba(20,40,75,.04),0 28px 48px -20px rgba(20,40,75,.34)}
+    .btn--primary:hover,.btn--light:hover{transform:translateY(-2px)}
+    .req:hover .req__code{background:var(--ink);color:#fff}
+  }
+  @media (hover:hover) and (min-width:1041px){
+    .nav__links a:not(.btn){position:relative}
+    .nav__links a:not(.btn)::after{
+      content:'';position:absolute;left:0;right:0;bottom:.2rem;height:2px;background:var(--teal);
+      transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.2,1);
+    }
+    .nav__links a:not(.btn):hover::after,.nav__links a[aria-current]::after{transform:scaleX(1)}
+  }
+
+  /* FAQ answers slide open */
+  @supports (interpolate-size:allow-keywords){
+    :root{interpolate-size:allow-keywords}
+    .faq details::details-content{height:0;overflow:clip;transition:height .3s ease,content-visibility .3s allow-discrete}
+    .faq details[open]::details-content{height:auto}
+  }
+
+  /* Scroll: a reading-progress line under the nav, and each block rises in as it enters */
+  @supports (animation-timeline:view()){
+    .nav::after{
+      content:'';position:absolute;left:0;bottom:-1px;width:100%;height:2px;background:var(--teal);
+      transform-origin:left;animation:progress linear both;animation-timeline:scroll(root);
+    }
+    .nav{animation:nav-lift linear both;animation-timeline:scroll(root);animation-range:0 140px}
+    .section-head,.req,.step,.fee__card,.fee__more,.fee__notes li,.about__photo,.about__body,
+    .faq-layout__intro,.faq details,.why > *,.cycle li,.retest__inner > *,.product,
+    .closing__inner > *,.post-list__item{
+      animation:reveal linear both;animation-timeline:view();animation-range:entry 0 entry 190px;
+    }
+    .step:nth-child(2),.closing__inner > :nth-child(2){animation-range:entry 50px entry 240px}
+    .step:nth-child(3){animation-range:entry 100px entry 290px}
+  }
+}
+@keyframes rise{from{opacity:0;translate:0 22px}}
+@keyframes reveal{from{opacity:0;translate:0 30px}}
+@keyframes progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes nav-lift{to{box-shadow:0 10px 28px -18px rgba(20,40,75,.45)}}
+@keyframes drift{from{translate:-18% 0}to{translate:18% 0}}
