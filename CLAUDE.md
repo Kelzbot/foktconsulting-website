@@ -61,7 +61,7 @@ All in `outreach/` (private, in `.assetsignore`):
 Where we are: about 259 cold emails to nonprofits got no positive reply, so the next outreach goes to small audit
 firms whose nonprofit clients carry repeat findings (they introduce the client, the client hires FOKT).
 - `audit-firms.html` (served at `/audit-firms`) and its `sitemap.xml` line are on branch `audit-firms-page`,
-  **uncommitted, not on master, not live**. Built from `international.html`'s nav and footer. Not in the nav or footer
+  **committed there (fd806f3), not pushed, not on master, not live**. Built from `international.html`'s nav and footer. Not in the nav or footer
   of any page yet (that means changing all six files together). Not viewed in a browser yet.
 - Firm list: `Desktop\Outreach\audit-firms-2024.csv` (40 firms, public fac.gov data, FY2024, nonprofit auditees,
   repeat findings on requirements A B C E I L M N, 3+ such clients, 5 to 150 nonprofit audits, national firms
