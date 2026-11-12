@@ -110,6 +110,7 @@ const FOOTER = `
             <li><a href="/#how">Findings Review</a></li>
             <li><a href="/#pricing">Pricing</a></li>
             <li><a href="/international">International NGOs</a></li>
+            <li><a href="/audit-firms">For audit firms</a></li>
             <li><a href="/#retest">Free retest note</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/#faq">FAQ</a></li>
