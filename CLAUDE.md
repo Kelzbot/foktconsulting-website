@@ -60,23 +60,23 @@ All in `outreach/` (private, in `.assetsignore`):
 
 Where we are: about 259 cold emails to nonprofits got no positive reply, so the next outreach goes to small audit
 firms whose nonprofit clients carry repeat findings (they introduce the client, the client hires FOKT).
-- `audit-firms.html` (served at `/audit-firms`) is on branch `audit-firms-page`, **committed, not pushed, not on
-  master, not live**. Linked from the footer Services column of every page and `scripts/build-blog.mjs` ("For audit
-  firms"), not from the top nav (already nine items). Checked in Chrome at desktop width on a local server.
-- Motion (same branch): one block at the end of `styles.css`, CSS only, no script. Hero rises in on load, blocks
+- `audit-firms.html` is **live at `/audit-firms`** (merged to master and pushed 12 Nov on Kelvin's OK, a97ca9b).
+  Linked from the footer Services column of every page and `scripts/build-blog.mjs` ("For audit firms"), not
+  from the top nav (already nine items). Branch `audit-firms-page` is merged and can be deleted.
+- Motion (live): one block at the end of `styles.css`, CSS only, no script. Hero rises in on load, blocks
   rise in on scroll, a progress line under the nav, card hover lifts, FAQ slides open, a slow glow in the closing
   band, cross-fade between pages. All of it sits inside `prefers-reduced-motion:no-preference`, and the scroll
   parts inside `@supports (animation-timeline:view())`, so other browsers show the page still. Reveals animate
   `translate` and hovers `transform`: keep them apart or a revealed card stops lifting. Seen working on the home
-  and audit-firms pages in Chrome only. Not checked: phone width, Safari, Firefox, blog pages.
+  and audit-firms pages in Chrome. Live page at 375 px: no sideways scroll, menu opens, cards stack (measured, not
+  eyeballed). Not checked: Safari, Firefox, blog pages.
 - Firm list: `Desktop\Outreach\audit-firms-2024.csv` (118 firms, sorted by clients with repeat findings; the first
   58 have 3 or more, the rest 2). Public fac.gov data, FY2024, nonprofit auditees, repeat findings on requirements
   A B C E I L M N, 5 to 150 nonprofit audits, national firms excluded. Rebuild with `audit_firms.py OUT.csv [YEAR]`
   beside it (`FAC_API_KEY` or the slow `DEMO_KEY`, which took about 10 minutes).
 - The page says FOKT pays and accepts no referral fees. Keep outreach consistent with that.
-- Waiting on Kelvin: look at the page and the motion, then say when to merge to master and push (that publishes).
-  The branch is 1 commit behind master (a blog build). Plan: 10 firms a week from his own mailbox, review at day
-  30 (3 real conversations or rework).
+- Next for Kelvin: DKIM check in Zoho, then 10 firms a week from his own mailbox, top of the list first. Review
+  at day 30 (3 real conversations or rework).
 - `support@foktconsulting.com` (in every footer and `index.html` JSON-LD): Kelvin says the mailbox is active again
   (12 Nov). Not test-mailed.
 
