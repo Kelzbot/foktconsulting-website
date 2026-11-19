@@ -24,6 +24,7 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -146,7 +147,7 @@
       <div class="wrap hero__grid">
         <div class="hero__copy">
           <p class="hero__kicker">Single Audit findings remediation</p>
-          <h1>Fix your Single Audit findings so they don’t come back.</h1>
+          <h1>Fix your Single Audit findings so they <span class="hl">don’t come back.</span></h1>
           <p class="hero__lede">FOKT helps US nonprofits close repeat federal audit findings. We map what your auditor tests, write the procedures, and build a corrective action plan your funder can accept.</p>
           <div class="hero__actions">
             <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener" class="btn btn--primary">Book a 20-minute call</a>
@@ -200,9 +201,52 @@
             </div>
           </div>
           <figcaption id="wpCaption">Illustrative example of a repeat finding and how a Findings Review fixes it. Not a client finding.</figcaption>
+          <ul class="chips" aria-hidden="true">
+            <li>Test map</li>
+            <li>25-item self-test</li>
+            <li>Corrective action plan</li>
+          </ul>
         </figure>
       </div>
     </header>
+
+    <!-- ── Requirement ticker (decorative: the same list is in "Findings we fix") ── -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <ul>
+          <li><b>A·B</b>Allowable costs &amp; activities</li>
+          <li><b>L</b>Reporting</li>
+          <li><b>I</b>Procurement &amp; debarment</li>
+          <li><b>C</b>Cash management</li>
+          <li><b>E</b>Eligibility</li>
+          <li><b>N</b>Special tests</li>
+          <li><b>Sec. II</b>Internal control</li>
+          <li><b>M</b>Subrecipient monitoring</li>
+        </ul>
+        <ul>
+          <li><b>A·B</b>Allowable costs &amp; activities</li>
+          <li><b>L</b>Reporting</li>
+          <li><b>I</b>Procurement &amp; debarment</li>
+          <li><b>C</b>Cash management</li>
+          <li><b>E</b>Eligibility</li>
+          <li><b>N</b>Special tests</li>
+          <li><b>Sec. II</b>Internal control</li>
+          <li><b>M</b>Subrecipient monitoring</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── A Findings Review in numbers ──────────────── -->
+    <section class="stats" aria-label="A Findings Review in numbers">
+      <div class="wrap">
+        <dl class="stats__grid">
+          <div><dt>Fixed fee for one compliance requirement</dt><dd>$<span data-count="2000">2,000</span></dd></div>
+          <div><dt>Working days from start to finish, about two weeks</dt><dd><span data-count="10">10</span></dd></div>
+          <div><dt>Deliverables, as editable Word and Excel files</dt><dd><span data-count="5">5</span></dd></div>
+          <div><dt>Transactions in the self-test after the fix</dt><dd><span data-count="25">25</span></dd></div>
+        </dl>
+      </div>
+    </section>
 
     <!-- ── Why findings repeat ───────────────────────── -->
     <section class="section section--wash" id="why" aria-labelledby="whyTitle">
@@ -283,7 +327,7 @@
               <p class="fee__label">Fee</p>
               <div class="fee__head">
                 <h3 class="fee__name">Findings Review</h3>
-                <p class="fee__price">$2,000<small>fixed</small></p>
+                <p class="fee__price">$<span data-count="2000">2,000</span><small>fixed</small></p>
               </div>
               <p class="fee__scope">One compliance requirement and every finding on it, repeats included. Each additional requirement: +$1,000.</p>
               <dl class="fee__terms">

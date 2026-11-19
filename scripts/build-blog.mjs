@@ -179,7 +179,8 @@ function head({ title, description, url, type = "website", extra = "" }) {
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/styles.css">${extra}
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/site.js" defer></script>${extra}
 </head>
 <body>
 ${NAV}
