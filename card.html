@@ -101,6 +101,7 @@
     .save--alt svg{color:var(--teal)}
     .save svg,.ways svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
     .save svg{width:21px;height:21px;color:var(--teal-bright)}
+    .save__hint{margin-top:10px;padding:9px 12px;border-radius:10px;background:var(--wash);border:1px solid var(--rule-ink);font-size:.86rem;line-height:1.4;text-align:center;color:var(--ink)}
     .save__num{margin-top:9px;text-align:center;font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.03em;color:var(--muted)}
     .ways{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:16px}
     .ways a{
@@ -252,7 +253,7 @@
         <p class="bcard__say">I help US nonprofits fix Single Audit findings <b>so they don’t come back.</b></p>
 
         <div class="save-row">
-          <a class="save" href="/assets/kelvin-fawehinmi.vcf">
+          <a class="save" id="saveContact" href="/assets/kelvin-fawehinmi.vcf">
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="3.6"/><path d="M5 19.5c1-3.3 3.7-5 7-5s6 1.7 7 5"/></svg>Save contact
           </a>
           <a class="save save--alt" href="https://wa.me/2348060559714?text=Hi%20Kelvin%2C%20I%20have%20your%20FOKT%20Consulting%20card." target="_blank" rel="noopener">
@@ -260,6 +261,7 @@
           </a>
         </div>
         <p class="save__num">Kelvin Fawehinmi · +234 806 055 9714</p>
+        <p class="save__hint" id="saveHint" role="status" hidden>Downloaded. Tap <b>Open</b>, then <b>Save</b>, to add Kelvin to your contacts.</p>
 
         <nav class="ways" aria-label="Ways to reach Kelvin">
           <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M8 3v4m8-4v4M3.5 10h17"/></svg></span>Book</a>
@@ -303,6 +305,17 @@
 
     <p class="cardpage__foot">Federal grants compliance since 2022 · <a href="/">foktconsulting.com</a></p>
   </main>
+
+  <script>
+    /* Android cannot open Contacts from a web page: the browser downloads the contact file first.
+       So on Android, give the file a readable name and say what to tap next. iPhones open it directly. */
+    (function(){
+      var link = document.getElementById('saveContact'), hint = document.getElementById('saveHint');
+      if (!link || !hint || !/Android/i.test(navigator.userAgent)) return;
+      link.setAttribute('download', 'Kelvin Fawehinmi - FOKT Consulting.vcf');
+      link.addEventListener('click', function(){ hint.hidden = false; });
+    })();
+  </script>
 
   <script>
     /* The card leans toward the pointer and its shadow moves with it. Mouse only. */
