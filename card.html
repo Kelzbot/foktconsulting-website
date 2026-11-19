@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Kelvin Fawehinmi | FOKT Consulting</title>
+  <meta name="description" content="Digital business card for Kelvin Fawehinmi, founder of FOKT Consulting. Single Audit findings remediation for US nonprofits.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0C1A33">
+  <link rel="canonical" href="https://foktconsulting.com/card">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://foktconsulting.com/card">
+  <meta property="og:site_name" content="FOKT Consulting">
+  <meta property="og:title" content="Kelvin Fawehinmi | FOKT Consulting">
+  <meta property="og:description" content="Founder, FOKT Consulting. Single Audit findings remediation for US nonprofits.">
+  <meta property="og:image" content="https://foktconsulting.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* The card page. The QR code on it opens this same address (foktconsulting.com/card), so what
+       the code leads to can change here at any time without reprinting the code.
+       The page stands alone: it needs only the base tokens, .btn and .brand from styles.css. */
+    :root{--teal-bright:#3FD0C9;--ease:cubic-bezier(.2,.7,.2,1)}
+    @property --angle{syntax:'<angle>';inherits:false;initial-value:0deg}
+    @keyframes grid-drift{to{transform:translate(56px,56px)}}
+    @keyframes spin{to{--angle:360deg}}
+    @keyframes rise{from{opacity:0;translate:0 22px}}
+    body.cardpage{
+      min-height:100vh;min-height:100dvh;display:grid;place-items:center;padding:32px 16px;overflow-x:hidden;
+      position:relative;isolation:isolate;color:var(--on-ink);
+      background:
+        radial-gradient(900px 560px at 85% -10%,rgba(14,124,123,.55),transparent 62%),
+        linear-gradient(160deg,#091428 0%,var(--ink) 58%,#0D2C4C 100%);
+    }
+    body.cardpage::before{
+      content:'';position:fixed;inset:-56px;z-index:-1;pointer-events:none;
+      background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+      background-size:56px 56px;
+      -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 75%);
+      mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 75%);
+    }
+    .cardpage main{width:100%;max-width:820px}
+    .bcard{
+      position:relative;overflow:hidden;border-radius:26px;border:1.5px solid transparent;
+      background:
+        linear-gradient(160deg,rgba(22,44,82,.96),rgba(10,22,44,.97)) padding-box,
+        conic-gradient(from var(--angle),rgba(255,255,255,.16) 0 50%,var(--teal-bright) 66%,rgba(255,255,255,.16) 82%) border-box;
+      box-shadow:0 50px 100px -40px rgba(0,0,0,.75);
+      transform:perspective(1200px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+      transition:transform .35s var(--ease);
+    }
+    .bcard__grid{display:grid;grid-template-columns:minmax(0,1fr) 300px}
+    .bcard__main{padding:34px 36px 36px}
+    .bcard__brand{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .bcard__brand .brand__name{color:#fff}
+    .bcard__brand .brand__name span{color:var(--on-ink)}
+    .bcard__tag{
+      font-family:var(--mono);font-weight:500;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--teal-light);border:1px solid rgba(143,211,209,.35);border-radius:999px;padding:.3rem .7rem;white-space:nowrap;
+    }
+    .bcard__id{display:flex;align-items:center;gap:18px;margin-top:34px}
+    .bcard__id img{width:76px;height:76px;border-radius:50%;flex:none;background:var(--wash);box-shadow:0 0 0 3px rgba(63,208,201,.55)}
+    .bcard h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,4.6vw,2.15rem);line-height:1.1;color:#fff;letter-spacing:-.015em}
+    .bcard__role{margin-top:4px;font-weight:600;color:var(--teal-light)}
+    .bcard__h{margin-top:26px;font-family:var(--mono);font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light)}
+    .bcard__does{margin-top:10px;display:grid;gap:7px}
+    .bcard__does li{position:relative;padding-left:20px;font-size:.98rem;line-height:1.45;color:#fff}
+    .bcard__does li::before{content:'';position:absolute;left:2px;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--teal-bright)}
+    .bcard__since{margin-top:12px;font-size:.88rem;line-height:1.5;color:var(--on-ink)}
+    .bcard__actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+    .bcard__actions .btn{width:100%;min-height:50px;padding:.7rem 1rem;font-size:.97rem}
+    .bcard__actions .btn--wide{grid-column:1/-1}
+    .bcard__actions .btn--save{grid-column:1/-1;background:#fff;border-color:#fff;color:var(--ink)}
+    .bcard__actions .btn--save:hover{background:var(--teal-light);border-color:var(--teal-light);color:var(--ink-deep)}
+    .bcard__actions .btn--ghost{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.32);color:#fff}
+    .bcard__actions .btn--ghost:hover{background:rgba(255,255,255,.16);color:#fff}
+    .bcard__actions svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+    .bcard :focus-visible{outline-color:var(--teal-bright)}
+    .bcard__qr{
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:34px 30px;
+      background:rgba(255,255,255,.05);border-left:1px solid rgba(255,255,255,.1);text-align:center;
+    }
+    .qr{position:relative;overflow:hidden;width:100%;max-width:230px;border-radius:16px;background:#fff;box-shadow:0 20px 40px -20px rgba(0,0,0,.7)}
+    .qr svg{display:block;width:100%;height:auto}
+    .bcard__qr figcaption{font-size:.86rem;line-height:1.45;color:var(--on-ink)}
+    .bcard__qr figcaption b{display:block;color:#fff;font-family:var(--mono);font-weight:500;font-size:.8rem;letter-spacing:.03em;margin-top:4px}
+    .cardpage__foot{margin-top:22px;text-align:center;font-size:.85rem;color:var(--on-ink)}
+    .cardpage__foot a{color:var(--teal-light)}
+
+    @media (prefers-reduced-motion:no-preference){
+      body.cardpage::before{animation:grid-drift 16s linear infinite}
+      .bcard{animation:rise .8s var(--ease) both,spin 8s linear infinite}
+      .bcard__main > *{animation:rise .7s var(--ease) both}
+      .bcard__main > :nth-child(2){animation-delay:.1s}
+      .bcard__main > :nth-child(3){animation-delay:.18s}
+      .bcard__main > :nth-child(4){animation-delay:.26s}
+      .bcard__main > :nth-child(5){animation-delay:.34s}
+      /* a light sweeps across the card once */
+      .bcard::after{
+        content:'';position:absolute;inset:0;pointer-events:none;
+        background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.16) 50%,transparent 60%);
+        translate:-120% 0;animation:sheen 1.6s var(--ease) .7s 1 both;
+      }
+      /* the code wipes in, then a scan line passes over it every few seconds */
+      .qr svg{animation:qr-in 1s cubic-bezier(.4,0,.2,1) .45s both}
+      .qr::after{
+        content:'';position:absolute;left:0;top:0;width:100%;height:36%;pointer-events:none;
+        background:linear-gradient(rgba(63,208,201,0),rgba(63,208,201,.28));border-bottom:2px solid var(--teal-bright);
+        translate:0 -110%;animation:qr-scan 4.5s cubic-bezier(.4,0,.2,1) 1.6s infinite;
+      }
+      @media (hover:hover){.bcard__actions .btn:hover{transform:translateY(-2px)}}
+    }
+    @keyframes sheen{to{translate:120% 0}}
+    @keyframes qr-in{from{clip-path:inset(0 0 100% 0);opacity:.2}to{clip-path:inset(0);opacity:1}}
+    @keyframes qr-scan{0%{translate:0 -110%;opacity:1}45%{translate:0 290%;opacity:1}55%,100%{translate:0 290%;opacity:0}}
+
+    @media (max-width:760px){
+      body.cardpage{padding:18px 12px;place-items:start center}
+      .bcard__grid{grid-template-columns:1fr}
+      .bcard__main{padding:26px 22px 26px}
+      .bcard__id{margin-top:26px}
+      .bcard__qr{border-left:0;border-top:1px solid rgba(255,255,255,.1);padding:26px 22px 28px}
+      .qr{max-width:200px}
+    }
+    @media (max-width:380px){.bcard__actions{grid-template-columns:1fr}}
+  </style>
+</head>
+<body class="cardpage">
+
+  <main>
+    <article class="bcard" data-tilt>
+      <div class="bcard__grid">
+        <div class="bcard__main">
+          <div class="bcard__brand">
+            <a href="/" class="brand" aria-label="FOKT Consulting home">
+              <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#fff"/><path d="M9 6.5h12.5v3.7H13v3.9h7.4v3.7H13v8.2H9z" fill="#14284B"/><path d="M18.6 22.6l2.3 2.3 4.6-5" fill="none" stroke="#0E7C7B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="brand__name">FOKT <span>Consulting</span></span>
+            </a>
+            <span class="bcard__tag">Business card</span>
+          </div>
+
+          <div class="bcard__id">
+            <picture>
+              <source srcset="/assets/kelvin-fawehinmi-face.webp" type="image/webp">
+              <img src="/assets/kelvin-fawehinmi-face.jpg" alt="" width="76" height="76">
+            </picture>
+            <div>
+              <h1>Kelvin Fawehinmi</h1>
+              <p class="bcard__role">Founder, FOKT Consulting LLC</p>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="bcard__h">What I do</h2>
+            <ul class="bcard__does">
+              <li>Fix repeat Single Audit findings for US nonprofits</li>
+              <li>Write corrective action plans and procedures under 2 CFR 200</li>
+              <li>Donor compliance for international NGOs on US Government and Global Fund awards</li>
+              <li>Build NofoDesk, a grant management workspace</li>
+            </ul>
+            <p class="bcard__since">Federal grants compliance since 2022 across PEPFAR, NIH and USAID awards.</p>
+          </div>
+
+          <div class="bcard__actions">
+            <a class="btn btn--save" href="/assets/kelvin-fawehinmi.vcf" download="Kelvin-Fawehinmi-FOKT.vcf">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg>Save contact
+            </a>
+            <a class="btn btn--ghost" href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M8 3v4m8-4v4M3.5 10h17"/></svg>Book a call
+            </a>
+            <a class="btn btn--ghost" href="mailto:kelvin@foktconsulting.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 6 8-6"/></svg>Email
+            </a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/oreoluwa-fawehinmi" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8 10.5V16m0-8.2v.1M12 16v-3.2a2.2 2.2 0 014.4 0V16M12 10.5V16"/></svg>LinkedIn
+            </a>
+            <a class="btn btn--ghost" href="https://www.instagram.com/fkelz_/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><path d="M16.9 7.1v.1"/></svg>Instagram
+            </a>
+            <a class="btn btn--ghost btn--wide" href="https://foktconsulting.com/">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17m0-17c-2.6 2.4-2.6 14.6 0 17"/></svg>foktconsulting.com
+            </a>
+          </div>
+        </div>
+
+        <figure class="bcard__qr">
+          <div class="qr">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" shape-rendering="crispEdges" role="img" aria-label="QR code that opens foktconsulting.com/card"><rect width="37" height="37" fill="#fff"/><path fill="#0C1A33" d="M4 4h7v1h-7zM14 4h3v1h-3zM18 4h1v1h-1zM20 4h5v1h-5zM26 4h7v1h-7zM4 5h1v1h-1zM10 5h1v1h-1zM12 5h1v1h-1zM14 5h2v1h-2zM17 5h1v1h-1zM19 5h1v1h-1zM26 5h1v1h-1zM32 5h1v1h-1zM4 6h1v1h-1zM6 6h3v1h-3zM10 6h1v1h-1zM12 6h2v1h-2zM16 6h3v1h-3zM20 6h1v1h-1zM22 6h1v1h-1zM24 6h1v1h-1zM26 6h1v1h-1zM28 6h3v1h-3zM32 6h1v1h-1zM4 7h1v1h-1zM6 7h3v1h-3zM10 7h1v1h-1zM14 7h1v1h-1zM21 7h1v1h-1zM23 7h1v1h-1zM26 7h1v1h-1zM28 7h3v1h-3zM32 7h1v1h-1zM4 8h1v1h-1zM6 8h3v1h-3zM10 8h1v1h-1zM14 8h3v1h-3zM18 8h6v1h-6zM26 8h1v1h-1zM28 8h3v1h-3zM32 8h1v1h-1zM4 9h1v1h-1zM10 9h1v1h-1zM13 9h3v1h-3zM17 9h5v1h-5zM23 9h2v1h-2zM26 9h1v1h-1zM32 9h1v1h-1zM4 10h7v1h-7zM12 10h1v1h-1zM14 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM20 10h1v1h-1zM22 10h1v1h-1zM24 10h1v1h-1zM26 10h7v1h-7zM15 11h1v1h-1zM17 11h7v1h-7zM5 12h3v1h-3zM9 12h2v1h-2zM13 12h1v1h-1zM15 12h1v1h-1zM18 12h5v1h-5zM30 12h2v1h-2zM5 13h1v1h-1zM9 13h1v1h-1zM11 13h4v1h-4zM22 13h2v1h-2zM25 13h2v1h-2zM28 13h3v1h-3zM32 13h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM10 14h3v1h-3zM17 14h2v1h-2zM21 14h2v1h-2zM26 14h1v1h-1zM28 14h1v1h-1zM30 14h2v1h-2zM4 15h1v1h-1zM12 15h1v1h-1zM14 15h4v1h-4zM20 15h1v1h-1zM23 15h2v1h-2zM27 15h1v1h-1zM32 15h1v1h-1zM7 16h4v1h-4zM12 16h1v1h-1zM16 16h2v1h-2zM19 16h1v1h-1zM21 16h1v1h-1zM23 16h1v1h-1zM25 16h1v1h-1zM27 16h1v1h-1zM29 16h4v1h-4zM7 17h3v1h-3zM11 17h1v1h-1zM13 17h2v1h-2zM16 17h1v1h-1zM18 17h1v1h-1zM21 17h1v1h-1zM23 17h1v1h-1zM26 17h2v1h-2zM29 17h2v1h-2zM32 17h1v1h-1zM6 18h2v1h-2zM10 18h3v1h-3zM14 18h1v1h-1zM16 18h1v1h-1zM18 18h3v1h-3zM23 18h1v1h-1zM25 18h1v1h-1zM27 18h3v1h-3zM31 18h2v1h-2zM5 19h1v1h-1zM12 19h1v1h-1zM16 19h1v1h-1zM19 19h2v1h-2zM23 19h4v1h-4zM28 19h2v1h-2zM4 20h3v1h-3zM10 20h1v1h-1zM12 20h1v1h-1zM15 20h2v1h-2zM22 20h1v1h-1zM24 20h2v1h-2zM27 20h3v1h-3zM31 20h1v1h-1zM5 21h1v1h-1zM9 21h1v1h-1zM12 21h2v1h-2zM18 21h1v1h-1zM22 21h1v1h-1zM24 21h1v1h-1zM27 21h1v1h-1zM4 22h1v1h-1zM9 22h7v1h-7zM21 22h2v1h-2zM24 22h1v1h-1zM26 22h1v1h-1zM6 23h1v1h-1zM14 23h2v1h-2zM18 23h6v1h-6zM25 23h2v1h-2zM28 23h5v1h-5zM4 24h2v1h-2zM7 24h2v1h-2zM10 24h1v1h-1zM12 24h1v1h-1zM16 24h2v1h-2zM19 24h1v1h-1zM21 24h2v1h-2zM24 24h8v1h-8zM12 25h1v1h-1zM14 25h1v1h-1zM17 25h2v1h-2zM20 25h1v1h-1zM22 25h1v1h-1zM24 25h1v1h-1zM28 25h2v1h-2zM32 25h1v1h-1zM4 26h7v1h-7zM14 26h3v1h-3zM23 26h2v1h-2zM26 26h1v1h-1zM28 26h1v1h-1zM30 26h2v1h-2zM4 27h1v1h-1zM10 27h1v1h-1zM12 27h1v1h-1zM14 27h1v1h-1zM16 27h2v1h-2zM19 27h1v1h-1zM24 27h1v1h-1zM28 27h1v1h-1zM31 27h1v1h-1zM4 28h1v1h-1zM6 28h3v1h-3zM10 28h1v1h-1zM14 28h2v1h-2zM17 28h2v1h-2zM21 28h1v1h-1zM24 28h8v1h-8zM4 29h1v1h-1zM6 29h3v1h-3zM10 29h1v1h-1zM12 29h1v1h-1zM17 29h1v1h-1zM23 29h1v1h-1zM28 29h1v1h-1zM31 29h1v1h-1zM4 30h1v1h-1zM6 30h3v1h-3zM10 30h1v1h-1zM12 30h2v1h-2zM15 30h1v1h-1zM17 30h1v1h-1zM20 30h3v1h-3zM24 30h1v1h-1zM27 30h1v1h-1zM32 30h1v1h-1zM4 31h1v1h-1zM10 31h1v1h-1zM12 31h6v1h-6zM19 31h2v1h-2zM24 31h2v1h-2zM28 31h2v1h-2zM31 31h1v1h-1zM4 32h7v1h-7zM13 32h1v1h-1zM15 32h2v1h-2zM18 32h1v1h-1zM22 32h6v1h-6zM31 32h1v1h-1z"/></svg>
+          </div>
+          <figcaption>Scan to open my card<b>foktconsulting.com/card</b></figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <p class="cardpage__foot">FOKT Consulting LLC, Sheridan, Wyoming, United States · <a href="/">foktconsulting.com</a></p>
+  </main>
+
+  <script>
+    (function(){
+      var card = document.querySelector('[data-tilt]');
+      if (!card || !window.matchMedia('(hover: hover) and (pointer: fine)').matches ||
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      card.addEventListener('pointermove', function(e){
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--ry', (((e.clientX - r.left) / r.width - .5) * 6).toFixed(2) + 'deg');
+        card.style.setProperty('--rx', (((e.clientY - r.top) / r.height - .5) * -6).toFixed(2) + 'deg');
+      });
+      card.addEventListener('pointerleave', function(){
+        card.style.setProperty('--rx', '0deg'); card.style.setProperty('--ry', '0deg');
+      });
+    })();
+  </script>
+
+</body>
+</html>

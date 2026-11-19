@@ -11,3 +11,7 @@
 /blog/posts.json
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=300
+
+/assets/kelvin-fawehinmi.vcf
+  Content-Type: text/vcard; charset=utf-8
+  Content-Disposition: attachment; filename="Kelvin-Fawehinmi-FOKT.vcf"
