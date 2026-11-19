@@ -87,7 +87,7 @@
 
     /* Actions */
     .save{
-      display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;min-height:54px;margin-top:22px;
+      display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;min-height:54px;
       border-radius:14px;border:0;cursor:pointer;text-decoration:none;
       background:linear-gradient(135deg,var(--ink) 0%,#1D3B6E 100%);color:#fff;
       font-family:var(--sans);font-weight:600;font-size:1.02rem;
@@ -95,6 +95,10 @@
       transition:transform .2s var(--ease),box-shadow .2s;
     }
     .save:hover{color:#fff}
+    .save-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+    .save--alt{background:#fff;color:var(--ink);box-shadow:0 0 0 1.5px var(--ink) inset}
+    .save--alt:hover{color:var(--ink);background:var(--wash)}
+    .save--alt svg{color:var(--teal)}
     .save svg,.ways svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
     .save svg{width:21px;height:21px;color:var(--teal-bright)}
     .save__num{margin-top:9px;text-align:center;font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.03em;color:var(--muted)}
@@ -160,11 +164,12 @@
       .bcard{animation:set-down 1s var(--ease) both}
       .bcard__foil{animation:foil 5s linear infinite}
       .bcard__brand,.bcard__id,.bcard__say,.save,.save__num,.ways a,.tear,.scan,.does li,.bcard__foot{animation:write-in .6s var(--ease) both}
-      .save__num{animation-delay:.7s}
       .bcard__brand{animation-delay:.35s}
       .bcard__id{animation-delay:.45s}
       .bcard__say{animation-delay:.55s}
       .save{animation-delay:.65s}
+      .save--alt{animation-delay:.7s}
+      .save__num{animation-delay:.76s}
       .ways a:nth-child(1){animation-delay:.72s}
       .ways a:nth-child(2){animation-delay:.78s}
       .ways a:nth-child(3){animation-delay:.84s}
@@ -246,9 +251,14 @@
 
         <p class="bcard__say">I help US nonprofits fix Single Audit findings <b>so they don’t come back.</b></p>
 
-        <a class="save" href="https://wa.me/2348060559714?text=Hi%20Kelvin%2C%20I%20have%20your%20FOKT%20Consulting%20card." target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 00-7.4 12.7L3.5 20.5l4.4-1.1A8.5 8.5 0 1012 3.5z"/><path d="M9.2 8.4c-.3 2.6 2.6 6 6 6.3l1.2-1.5-2-1.1-.9.8c-1-.4-1.8-1.2-2.3-2.2l.8-.9-1.1-2z"/></svg>Save me on WhatsApp
-        </a>
+        <div class="save-row">
+          <a class="save" href="/assets/kelvin-fawehinmi.vcf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="3.6"/><path d="M5 19.5c1-3.3 3.7-5 7-5s6 1.7 7 5"/></svg>Save contact
+          </a>
+          <a class="save save--alt" href="https://wa.me/2348060559714?text=Hi%20Kelvin%2C%20I%20have%20your%20FOKT%20Consulting%20card." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 00-7.4 12.7L3.5 20.5l4.4-1.1A8.5 8.5 0 1012 3.5z"/><path d="M9.2 8.4c-.3 2.6 2.6 6 6 6.3l1.2-1.5-2-1.1-.9.8c-1-.4-1.8-1.2-2.3-2.2l.8-.9-1.1-2z"/></svg>WhatsApp
+          </a>
+        </div>
         <p class="save__num">Kelvin Fawehinmi · +234 806 055 9714</p>
 
         <nav class="ways" aria-label="Ways to reach Kelvin">
