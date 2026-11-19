@@ -96,7 +96,8 @@
     }
     .save:hover{color:#fff}
     .save svg,.ways svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-    .save svg{width:19px;height:19px}
+    .save svg{width:21px;height:21px;color:var(--teal-bright)}
+    .save__num{margin-top:9px;text-align:center;font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.03em;color:var(--muted)}
     .ways{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:16px}
     .ways a{
       display:flex;flex-direction:column;align-items:center;gap:7px;padding:4px 0;text-decoration:none;
@@ -158,7 +159,8 @@
       body.cardpage::before{animation:grid-drift 18s linear infinite}
       .bcard{animation:set-down 1s var(--ease) both}
       .bcard__foil{animation:foil 5s linear infinite}
-      .bcard__brand,.bcard__id,.bcard__say,.save,.ways a,.tear,.scan,.does li,.bcard__foot{animation:write-in .6s var(--ease) both}
+      .bcard__brand,.bcard__id,.bcard__say,.save,.save__num,.ways a,.tear,.scan,.does li,.bcard__foot{animation:write-in .6s var(--ease) both}
+      .save__num{animation-delay:.7s}
       .bcard__brand{animation-delay:.35s}
       .bcard__id{animation-delay:.45s}
       .bcard__say{animation-delay:.55s}
@@ -244,9 +246,10 @@
 
         <p class="bcard__say">I help US nonprofits fix Single Audit findings <b>so they don’t come back.</b></p>
 
-        <a class="save" href="/assets/kelvin-fawehinmi.vcf" download="Kelvin-Fawehinmi-FOKT.vcf">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19.5h14"/></svg>Save contact
+        <a class="save" href="https://wa.me/2348060559714?text=Hi%20Kelvin%2C%20I%20have%20your%20FOKT%20Consulting%20card." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 00-7.4 12.7L3.5 20.5l4.4-1.1A8.5 8.5 0 1012 3.5z"/><path d="M9.2 8.4c-.3 2.6 2.6 6 6 6.3l1.2-1.5-2-1.1-.9.8c-1-.4-1.8-1.2-2.3-2.2l.8-.9-1.1-2z"/></svg>Save me on WhatsApp
         </a>
+        <p class="save__num">Kelvin Fawehinmi · +234 806 055 9714</p>
 
         <nav class="ways" aria-label="Ways to reach Kelvin">
           <a href="https://cal.com/foktconsulting/20min" target="_blank" rel="noopener"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M8 3v4m8-4v4M3.5 10h17"/></svg></span>Book</a>
